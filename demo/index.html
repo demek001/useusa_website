@@ -1,5 +1,5 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Demonstração — USA.b</title><meta name="description" content="Veja a USA.b funcionando numa barbearia fictícia: agendamento pelo link, conversa no WhatsApp, painel com meta da semana e fechamento com extrato.">
+<title>Demonstração — Opa</title><meta name="description" content="Veja o Opa funcionando numa barbearia fictícia: agendamento pelo link, conversa no WhatsApp, painel com meta da semana e fechamento com extrato.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -101,13 +101,20 @@ footer a{color:var(--muted)}
 .passos-f b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.3);font-size:.7rem;flex:none}
 .passos-f li.feito b{background:#3ccf3c;border-color:#3ccf3c;color:#111}
 .bt-pn{background:#f3ebdd;color:#111;border:0;border-radius:999px;padding:.6rem;font:600 .88rem system-ui,sans-serif;cursor:pointer}
-.qr-bloco{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;margin-top:3rem;padding:1.25rem;border:1px solid var(--line);border-radius:16px}
-.qr-bloco svg{width:132px;height:132px;display:block;border-radius:8px}
-.qr-bloco h2{margin:0 0 .3rem}.qr-bloco p{margin:.2rem 0}
-@media (max-width:30rem){.qr-bloco{grid-template-columns:1fr;text-align:center}.qr-bloco svg{margin:0 auto}}
+.quero{margin-top:3rem;padding:1.5rem;border:1px solid var(--line);border-radius:16px;text-align:center}
+.quero h2{margin:0 0 .3rem}.quero p{margin:.2rem auto 1rem}
+.bt-quero{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font:600 1.05rem "Bricolage Grotesque",system-ui,sans-serif;padding:.85rem 1.4rem;border-radius:999px}
+.bt-quero:hover{filter:brightness(1.08)}
+/* Modo de captura (?captura=...): só o celular, para as imagens da página de recursos. */
+body.captura{background:#fff}
+body.captura>.pole,body.captura>header,body.captura>footer,body.captura main>*:not(.palco),body.captura .explica{display:none!important}
+body.captura main{max-width:none;padding:0}
+body.captura .palco{display:block;margin:0}
+body.captura .celular{margin:0;box-shadow:none;max-width:380px}
+body.captura .troca-wa{display:none}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style></head><body><div class="pole" aria-hidden="true"></div>
-<header><a class="brand" href="/">USA.b</a><nav><a href="/recursos/">Recursos</a><a href="/comparativo/">Comparativo</a><a href="/demo/">Demonstração</a></nav></header><main>
+<header><a class="brand" href="/">Opa</a><nav><a href="/recursos/">Recursos</a><a href="/comparativo/">Comparativo</a><a href="/demo/">Demonstração</a></nav></header><main>
 <h1>Veja como funciona.</h1>
 <p class="lead">Uma barbearia fictícia, a <strong>Barbearia Exemplo</strong>, com três barbeiros. Toque nas telas como se fosse no celular.</p>
 <p class="aviso-demo">Demonstração com dados 100% fictícios. Nada aqui é enviado, gravado ou cobrado.</p>
@@ -124,11 +131,12 @@ footer a{color:var(--muted)}
 <div class="explica" id="explica"></div>
 </div>
 
-<section class="qr-bloco" aria-labelledby="qr-titulo">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" class="qr"><title>QR Code para useusa.com.br/cadastro</title><path fill="#fff" d="M0 0h33v33h-33z"/><path stroke="#1d2a3a" d="M2 2.5h7m1 0h7m4 0h2m1 0h7m-29 1h1m5 0h1m4 0h6m3 0h1m1 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m2 0h1m2 0h1m1 0h1m4 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h3m1 0h2m4 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m2 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m1 0h2m1 0h2m1 0h3m3 0h1m1 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h1m3 0h1m1 0h2m1 0h2m-19 1h7m3 0h3m2 0h2m2 0h1m2 0h2m3 0h1m-27 1h1m1 0h2m1 0h2m1 0h2m1 0h2m1 0h1m2 0h8m1 0h1m-28 1h1m4 0h1m1 0h2m2 0h1m2 0h2m3 0h4m1 0h1m-25 1h2m6 0h2m1 0h4m5 0h3m3 0h1m-25 1h6m2 0h1m1 0h1m3 0h1m2 0h2m1 0h1m2 0h3m-29 1h3m1 0h1m6 0h1m1 0h2m1 0h1m2 0h4m1 0h2m1 0h2m-29 1h1m1 0h1m1 0h3m1 0h1m3 0h7m1 0h2m1 0h1m-22 1h3m3 0h2m1 0h2m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m-29 1h2m4 0h1m1 0h1m2 0h2m4 0h1m7 0h2m1 0h1m-29 1h5m2 0h1m5 0h3m2 0h5m1 0h5m-29 1h1m3 0h1m1 0h1m3 0h2m2 0h2m1 0h2m3 0h1m3 0h1m-27 1h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m4 0h1m1 0h1m1 0h2m2 0h1m-29 1h1m1 0h2m2 0h3m2 0h3m1 0h1m1 0h1m2 0h5m1 0h1m1 0h1m-21 1h1m2 0h2m1 0h1m1 0h5m3 0h2m1 0h2m-29 1h7m1 0h8m1 0h1m1 0h2m1 0h1m1 0h1m-25 1h1m5 0h1m1 0h4m4 0h1m2 0h2m3 0h2m2 0h1m-29 1h1m1 0h3m1 0h1m1 0h4m5 0h2m1 0h8m-28 1h1m1 0h3m1 0h1m1 0h2m3 0h3m2 0h4m1 0h1m-24 1h1m1 0h3m1 0h1m1 0h1m1 0h4m1 0h2m1 0h7m1 0h2m-28 1h1m5 0h1m1 0h2m2 0h1m3 0h1m3 0h2m2 0h2m1 0h1m-28 1h7m2 0h1m1 0h4m2 0h3m4 0h3"/></svg>
-<div><h2 id="qr-titulo">Quer na sua barbearia?</h2><p>Aponte a câmera do celular para o código ou acesse <a href="/cadastro/">useusa.com.br/cadastro</a>.</p><p class="updated">Sem fidelidade e sem multa.</p></div>
+<section class="quero" aria-labelledby="quero-titulo">
+<h2 id="quero-titulo">Gostou?</h2>
+<p>7 dias grátis em todos os planos. Sem fidelidade e sem multa.</p>
+<a class="bt-quero" href="/cadastro/">Quero usar na minha barbearia</a>
 </section>
-</main><footer><p>USA.b é um produto de Opa, CNPJ 66.824.150/0001-28.<br>Contato: <a href="mailto:contato@useusa.com.br">contato@useusa.com.br</a></p>
+</main><footer><p>Opa · CNPJ 66.824.150/0001-28.<br>Contato: <a href="mailto:contato@useusa.com.br">contato@useusa.com.br</a></p>
 <p><a href="/recursos/">Recursos</a> · <a href="/comparativo/">Comparativo</a> · <a href="/demo/">Demonstração</a> · <a href="/privacidade/">Política de privacidade</a> · <a href="/termos/">Termos de uso</a> · <a href="/exclusao-de-dados/">Exclusão de dados</a></p></footer><script>
 (() => {
   "use strict";
@@ -175,7 +183,7 @@ footer a{color:var(--muted)}
     link: ["O link do barbeiro", "Cada barbeiro tem um endereço próprio. O cliente escolhe o serviço, o dia e o horário livre, informa o nome e confirma. Sem aplicativo e sem cadastro.", "Experimente: escolha um serviço, um horário e confirme."],
     whats: ["Tudo no WhatsApp", "O cliente recebe a confirmação e o lembrete na véspera. O barbeiro recebe o aviso do novo horário e, no fim do atendimento, responde \"Chegou? Pagou?\" com dois toques.", "Troque entre a conversa do cliente e a do barbeiro, e toque nos botões."],
     painel: ["Meta da semana", "O dono vê quanto fica com a casa (a cota de cada barbeiro mais os próprios atendimentos), o que já está marcado e quanto falta para a meta, dia a dia.", "Arraste a meta para ver a cor mudar: verde, amarelo ou vermelho."],
-    fech: ["Fechamento com extrato", "No dia combinado, cada barbeiro recebe o extrato: atendimentos, faturado por Pix, cartão e dinheiro, a cota da casa e a chave Pix do dono. Ele paga direto ao dono e toca em \"Já paguei\".", "A USA.b não recebe nem repassa dinheiro. Toque em \"Já paguei\" e depois confirme como dono."],
+    fech: ["Fechamento com extrato", "No dia combinado, cada barbeiro recebe o extrato: atendimentos, faturado por Pix, cartão e dinheiro, a cota da casa e a chave Pix do dono. Ele paga direto ao dono e toca em \"Já paguei\".", "O Opa não recebe nem repassa dinheiro. Toque em \"Já paguei\" e depois confirme como dono."],
   };
 
   function desenharExplica() {
@@ -221,7 +229,7 @@ footer a{color:var(--muted)}
         h("button", { type: "button", class: "bt-ag", onclick: () => trocarAba("whats") }, "Ver o WhatsApp →"),
         h("button", { type: "button", class: "bt-sec", onclick: () => { S.passo = 0; S.servico = null; S.hora = null; desenhar(); } }, "Agendar outro"));
     }
-    add(h("div", { class: "rodape-ag" }, "Agendamento por USA.b"));
+    add(h("div", { class: "rodape-ag" }, "Agendamento por Opa"));
     return corpo;
   }
 
@@ -266,7 +274,7 @@ footer a{color:var(--muted)}
 
   function telaWhats() {
     const quem = S.quem;
-    const contato = quem === "cliente" ? ["B", "Barbearia Exemplo", "conta comercial"] : ["U", "Barbearia Exemplo (USA.b)", `você é ${S.barbeiro.nome}`];
+    const contato = quem === "cliente" ? ["B", "Barbearia Exemplo", "conta comercial"] : ["O", "Barbearia Exemplo (Opa)", `você é ${S.barbeiro.nome}`];
     const wa = h("div", { class: "wa" }, conv[quem].map((m, i) => m.data
       ? h("div", { class: "data-wa" }, m.data)
       : h("div", { class: `bal ${m.lado}` }, m.texto.replace(/\*/g, ""),
@@ -337,7 +345,7 @@ footer a{color:var(--muted)}
         pago === 0 ? h("button", { type: "button", class: "bt-pn", onclick: () => { S.fechPago = 1; desenhar(); } }, "Já paguei (como Diego)")
           : pago === 1 ? h("button", { type: "button", class: "bt-pn", onclick: () => { S.fechPago = 2; desenhar(); } }, "Confirmar recebimento (como Caio)")
           : h("button", { type: "button", class: "bt-pn", onclick: () => { S.fechPago = 0; desenhar(); } }, "Recomeçar")),
-      h("div", { class: "det" }, "O dinheiro vai do barbeiro direto para a chave Pix do dono. A USA.b só organiza o extrato."));
+      h("div", { class: "det" }, "O dinheiro vai do barbeiro direto para a chave Pix do dono. O Opa só organiza o extrato."));
   }
 
   function desenhar() {
@@ -351,7 +359,48 @@ footer a{color:var(--muted)}
     desenhar();
   }
   document.querySelectorAll("[data-aba]").forEach((b) => b.addEventListener("click", () => trocarAba(b.dataset.aba)));
-  desenhar();
+
+  // Modo de captura (?captura=nome): mostra só o celular numa tela pronta, para as imagens da página de recursos.
+  function telaNumeros() {
+    const k = (t, v, d) => h("div", { class: "cart" }, h("h4", null, t), h("div", { class: "valor" }, v), h("div", { class: "det" }, d));
+    return h("div", { class: "pn" }, h("h3", null, "Barbearia Exemplo · Resumo do mês"),
+      k("Faturamento", brl(14320), "▲ 8% vs. mês anterior"), k("Atendimentos", "212", "▲ 5% vs. mês anterior"),
+      k("Ticket médio", brl(67.55), "faturado ÷ atendimentos pagos"), k("Ocupação", "74%", "176 h agendadas de 238 h"),
+      k("Falta sem aviso", "2,8%", "6 de 218 não vieram"), k("Clientes novos", "41", "171 recorrentes"));
+  }
+  const cap = new URLSearchParams(location.search).get("captura");
+  if (cap) {
+    document.body.classList.add("captura");
+    S.servico = SERVICOS[1]; S.hora = "10:20"; S.nome = "Rafael";
+    montarConversas();
+    const b = (texto, lado, hora, botoes) => ({ lado, hora, texto, botoes });
+    const conv0 = { cliente: conv.cliente, barbeiro: conv.barbeiro };
+    const telas = {
+      link: () => { S.aba = "link"; S.passo = 0; },
+      horarios: () => { S.aba = "link"; S.passo = 1; },
+      confirmado: () => { S.aba = "link"; S.passo = 3; },
+      "wa-confirmacao": () => { S.aba = "whats"; S.quem = "cliente"; conv.cliente = conv0.cliente.slice(0, 1); },
+      "wa-lembrete": () => { S.aba = "whats"; S.quem = "cliente"; conv.cliente = conv0.cliente.slice(1); },
+      "wa-aviso": () => { S.aba = "whats"; S.quem = "barbeiro"; conv.barbeiro = conv0.barbeiro.slice(0, 1); },
+      "wa-agenda": () => { S.aba = "whats"; S.quem = "barbeiro"; conv.barbeiro = conv0.barbeiro.slice(1, 3); },
+      "wa-chegou": () => { S.aba = "whats"; S.quem = "barbeiro"; conv.barbeiro = [
+        { ...conv0.barbeiro[4], respondido: "Chegou" }, b("Chegou", "sai", "11:20"),
+        { ...b("💳 Como pagou?", "ent", "11:20", ["Pix", "Cartão", "Dinheiro"]), respondido: "Pix" }, b("Pix", "sai", "11:21"),
+        b("✅ Registrado: Pix. O atendimento já entra no seu fechamento.", "ent", "11:21")]; },
+      "wa-bloqueio": () => { S.aba = "whats"; S.quem = "barbeiro"; conv.barbeiro = [
+        b("bloqueia sexta das 14h às 16h", "sai", "09:02"),
+        { ...b("🔒 Bloquear sexta, das 14:00 às 16:00?", "ent", "09:02", ["Confirmar", "Corrigir"]), respondido: "Confirmar" },
+        b("Confirmar", "sai", "09:03"),
+        b("✅ Bloqueado: sexta, das 14:00 às 16:00.\n\n⚠️ Já estava marcado:\n14:00 Marcos · Corte\nChame no WhatsApp para combinar. Nada foi cancelado.", "ent", "09:03")]; },
+      "wa-resumo": () => { S.aba = "whats"; S.quem = "barbeiro"; S.barbeiro = BARBEIROS[0]; conv.barbeiro = [
+        b("📊 Resumo semanal · Barbearia Exemplo\n\nSemana passada\n96 atendimentos · R$ 6.480,00 faturados\nFicou com a casa: R$ 3.120,00\nMeta: R$ 3.000,00 · 104% 🟢 meta batida\n\nEsta semana\nPrevisto para a casa: R$ 1.940,00\nMeta: R$ 3.000,00\n🔴 Faltam R$ 1.060,00 (cerca de 34 atendimentos)", "ent", "09:00", ["Abrir painel"])]; },
+      painel: () => { S.aba = "painel"; S.meta = 3000; },
+      numeros: () => { S.aba = "numeros"; },
+      fechamento: () => { S.aba = "fech"; S.fechPago = 1; },
+    };
+    (telas[cap] || telas.link)();
+  }
+  if (S.aba === "numeros") { tela.replaceChildren(telaNumeros()); } else desenhar();
 })();
 </script>
 </body></html>
