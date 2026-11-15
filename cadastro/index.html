@@ -75,7 +75,10 @@ legend{font:600 .95rem "Bricolage Grotesque",system-ui,sans-serif;margin-bottom:
   // Envia para a Edge Function usab_leads. Nada de chave na página. Em localhost, usa a função rodando na máquina.
   const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8791/" : "https://api.usenotinha.com.br/functions/v1/usab_leads";
   const form = document.getElementById("form"), erro = document.getElementById("erro"), bt = document.getElementById("enviar"), ok = document.getElementById("ok");
-  const montado = Date.now();
+  // Tempo no formulário medido só aqui no aparelho (performance.now não depende do relógio do celular, que pode estar
+  // adiantado ou atrasado em relação ao servidor). A função recusa em silêncio envio com menos de 3 s desde "t";
+  // por isso, passado o tempo mínimo, mandamos t = 1 (sempre "há muito tempo"); antes dele, a hora atual (recusado).
+  const montado = performance.now();
   const mostrarErro = (m) => { erro.textContent = m; erro.hidden = false; erro.scrollIntoView({ block: "center" }); };
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
@@ -90,7 +93,7 @@ legend{font:600 .95rem "Bricolage Grotesque",system-ui,sans-serif;margin-bottom:
     const f = new FormData(form);
     const dados = {
       nome: f.get("nome"), estabelecimento: f.get("estabelecimento"), endereco: f.get("endereco"), profissionais: Number(f.get("profissionais")),
-      tipo: f.get("tipo"), whatsapp: f.get("whatsapp"), email: f.get("email"), aceite: f.get("aceite") === "on", site: f.get("site") || "", t: montado,
+      tipo: f.get("tipo"), whatsapp: f.get("whatsapp"), email: f.get("email"), aceite: f.get("aceite") === "on", site: f.get("site") || "", t: performance.now() - montado >= 3000 ? 1 : Date.now(),
     };
     bt.disabled = true; bt.textContent = "Enviando…";
     try {
