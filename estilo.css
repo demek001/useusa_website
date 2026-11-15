@@ -1,0 +1,28 @@
+/* Opa — base comum de todas as páginas: uma fonte (Manrope), uma cor de destaque (coral), claro e escuro. */
+:root{--ink:#17202b;--paper:#fcfcfa;--muted:#5d6672;--coral:#e0573f;--coral-forte:#c8442d;--line:#e6e7e3;--soft:#f4f4f1;--fonte:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  /* nomes antigos, mantidos para o CSS de cada página: tudo vira coral ou tinta (sem azul) */
+  --red:var(--coral);--blue:var(--coral-forte);color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--ink:#eceef0;--paper:#12171d;--muted:#a1a9b3;--coral:#ff7a62;--coral-forte:#ff8f7a;--line:#262d36;--soft:#181e25;color-scheme:dark}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--fonte)}
+header,main,footer{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+header{padding-top:1.25rem;padding-bottom:.25rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem 1rem;flex-wrap:wrap}
+.brand{font:800 1.5rem/1 var(--fonte);color:var(--ink);text-decoration:none;letter-spacing:-.03em}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:.25rem 1.1rem}
+nav a{color:var(--muted);text-decoration:none;font:600 .95rem var(--fonte)}
+nav a:hover{color:var(--ink)}
+nav a.bt-nav{color:#fff;background:var(--coral);padding:.5rem 1rem;border-radius:999px}
+nav a.bt-nav:hover{background:var(--coral-forte);color:#fff}
+@media (prefers-color-scheme:dark){nav a.bt-nav,nav a.bt-nav:hover{color:#16110f}}
+h1,h2,h3{font-family:var(--fonte);font-weight:800;letter-spacing:-.03em;line-height:1.12}
+h1{font-size:clamp(2rem,6vw,3.2rem);margin:2.5rem 0 1rem}
+h2{font-size:1.3rem;margin:2.2rem 0 .5rem}
+p,li{max-width:68ch}
+a{color:var(--coral-forte);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.updated{color:var(--muted);font-size:.9rem}
+.steps{padding-left:1.2rem}.steps li{margin:.4rem 0}
+footer{margin-top:4rem;padding-bottom:2.5rem;border-top:1px solid var(--line);padding-top:1.25rem;color:var(--muted);font-size:.9rem}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--ink)}

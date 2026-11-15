@@ -1,51 +1,34 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Recursos — Opa</title><meta name="description" content="Tudo o que o Opa faz: link de agendamento por barbeiro, lembrete na véspera, "Chegou? Pagou?", fechamento com extrato e chave Pix do dono, painel com meta da semana.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/estilo.css">
 <style>
-:root{--ink:#1d2a3a;--paper:#fbfbf8;--muted:#5b6675;--red:#b2342a;--blue:#2f4f86;--line:#dfe2e6;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--ink:#e9ecef;--paper:#141b24;--muted:#a3adba;--red:#e0685d;--blue:#8fb0e6;--line:#2b3644;color-scheme:dark}}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Literata",Georgia,serif}
-.pole{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,var(--paper) 14px 28px,var(--blue) 28px 42px,var(--paper) 42px 56px)}
-header,main,footer{max-width:44rem;margin:0 auto;padding:0 1.25rem}
-header{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
-.brand{font:800 1.5rem/1 "Bricolage Grotesque",system-ui,sans-serif;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
-nav a{color:var(--muted);margin-left:1rem;font:500 .95rem "Bricolage Grotesque",system-ui,sans-serif}
-h1,h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.15}
-h1{font-size:clamp(2rem,6vw,3.2rem);margin:2.5rem 0 1rem}
-h2{font-size:1.3rem;margin:2.2rem 0 .5rem}
-p,li{max-width:68ch}a{color:var(--blue)}a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.lead{font-size:1.2rem;color:var(--muted)}
-.updated{color:var(--muted);font-size:.9rem}
-.steps{padding-left:1.2rem}.steps li{margin:.4rem 0}
-footer{margin-top:4rem;padding-bottom:2.5rem;border-top:1px solid var(--line);padding-top:1.25rem;color:var(--muted);font-size:.9rem}
-footer a{color:var(--muted)}
 .grupo{margin-top:2.6rem}
 .grupo>h2{margin-top:0}
 .rec{display:grid;grid-template-columns:2.4rem 1fr;gap:.2rem 1rem;margin:1.4rem 0;align-items:start}
-.rec .n{font:800 1.05rem/1.6 "Bricolage Grotesque",system-ui,sans-serif;color:var(--red)}
-.rec h3{margin:0;font:600 1.05rem/1.4 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.01em}
+.rec .n{font:800 1.05rem/1.6 var(--fonte);color:var(--red)}
+.rec h3{margin:0;font:600 1.05rem/1.4 var(--fonte);letter-spacing:-.01em}
 .rec p{margin:.2rem 0 0}
 .garantias{list-style:none;padding:0;margin:1rem 0}
 .garantias li{padding:.7rem 0;border-top:1px solid var(--line)}
 .garantias li:last-child{border-bottom:1px solid var(--line)}
-.garantias strong{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.garantias strong{font-family:var(--fonte)}
 .nota{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding-left:.9rem;margin-top:2rem}
-.cta{margin-top:2rem}.cta a{font:600 1rem "Bricolage Grotesque",system-ui,sans-serif;margin-right:1.25rem}
+.cta{margin-top:2rem}.cta a{font:600 1rem var(--fonte);margin-right:1.25rem}
 .planos{display:grid;gap:.9rem;margin:1rem 0;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
 .plano{border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
-.plano h3{margin:0;font:800 1.15rem "Bricolage Grotesque",system-ui,sans-serif}
-.plano .preco{font:800 1.7rem/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:.35rem 0 .1rem}
-.plano .preco small{font:500 .9rem "Literata",Georgia,serif;color:var(--muted)}
+.plano h3{margin:0;font:800 1.15rem var(--fonte)}
+.plano .preco{font:800 1.7rem/1.2 var(--fonte);margin:.35rem 0 .1rem}
+.plano .preco small{font:500 .9rem var(--fonte);color:var(--muted)}
 .plano p{margin:0;color:var(--muted);font-size:.95rem}
 .gratis{font-weight:600}
 .rec{grid-template-columns:2.4rem 1fr}
 .shot{grid-column:2;margin:.8rem 0 .4rem}
 .shot img{display:block;width:min(15rem,70vw);height:auto;border-radius:22px;border:1px solid var(--line);background:#fff}
 @media (min-width:44rem){.rec{grid-template-columns:2.4rem 1fr 13rem}.shot{grid-column:3;grid-row:1/span 2;margin:0}.shot img{width:13rem}}
-</style></head><body><div class="pole" aria-hidden="true"></div>
-<header><a class="brand" href="/">Opa</a><nav><a href="/recursos/">Recursos</a><a href="/comparativo/">Comparativo</a><a href="/demo/">Demonstração</a></nav></header><main>
+</style></head><body>
+<header><a class="brand" href="/">Opa</a><nav><a href="/recursos/">Recursos</a><a href="/comparativo/">Comparativo</a><a href="/demo/">Demonstração</a><a class="bt-nav" href="/cadastro/">Testar grátis</a></nav></header><main>
 <h1>A recepcionista da barbearia, no WhatsApp.</h1>
 <p class="lead">O cliente agenda por um link, sem aplicativo e sem cadastro. O barbeiro recebe tudo no WhatsApp. O dono vê o movimento, a meta e as cotas num painel.</p>
 
@@ -79,7 +62,10 @@ footer a{color:var(--muted)}
 <div class="plano"><h3>Solo</h3><p class="preco">R$ 56,50 <small>por mês</small></p><p>1 profissional</p></div>
 <div class="plano"><h3>Time</h3><p class="preco">R$ 86,50 <small>por mês</small></p><p>2 a 4 profissionais</p></div>
 <div class="plano"><h3>Premium</h3><p class="preco">R$ 146,50 <small>por mês</small></p><p>até 6 profissionais</p></div>
+<div class="plano"><h3>Deluxe</h3><p class="preco">R$ 246,50 <small>por mês</small></p><p>até 12 profissionais</p></div>
+<div class="plano"><h3>Império</h3><p class="preco">R$ 366,50 <small>por mês</small></p><p>até 20 profissionais</p></div>
 </div>
+<p>Mais de 20 profissionais? <a href="/#sob-medida">Conte sua necessidade</a>. Você paga por mês, não por mensagem: <a href="/#planos">ver os planos</a>.</p>
 <p class="gratis">7 dias grátis em todos os planos. Sem fidelidade e sem multa.</p>
 </section>
 <section class="grupo" aria-labelledby="g-garantias">
