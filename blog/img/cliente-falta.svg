@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t"><title id="t">Ilustração: uma cadeira de barbeiro vazia ao lado de um celular com o lembrete da véspera</title>
+<rect width="800" height="420" fill="#f4f4f1"/>
+<rect x="60" y="350" width="420" height="10" rx="5" fill="#e6e7e3"/>
+<g fill="#17202b"><rect x="225" y="300" width="20" height="50"/><rect x="175" y="340" width="120" height="14" rx="7"/></g>
+<rect x="160" y="230" width="160" height="70" rx="20" fill="#e0573f"/>
+<rect x="175" y="110" width="130" height="130" rx="24" fill="#e0573f"/>
+<rect x="190" y="90" width="100" height="34" rx="12" fill="#17202b"/>
+<rect x="135" y="215" width="30" height="16" rx="8" fill="#17202b"/><rect x="315" y="215" width="30" height="16" rx="8" fill="#17202b"/>
+<path d="M160 300h-22a10 10 0 0 0 0 20h24" fill="none" stroke="#17202b" stroke-width="8" stroke-linecap="round"/>
+<text x="240" y="70" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="20" fill="#5d6672">10:20 · vazio</text>
+<rect x="520" y="60" width="190" height="320" rx="30" fill="#17202b"/><rect x="532" y="76" width="166" height="288" rx="20" fill="#efe7dd"/>
+<rect x="532" y="76" width="166" height="46" rx="20" fill="#0b6b5d"/><rect x="532" y="100" width="166" height="22" fill="#0b6b5d"/>
+<circle cx="556" cy="99" r="11" fill="#fcfcfa"/>
+<rect x="545" y="140" width="140" height="70" rx="10" fill="#fff"/>
+<text font-family="Manrope,system-ui,sans-serif" font-size="12" fill="#17202b"><tspan x="555" y="162" font-weight="800">⏰ Lembrete</tspan><tspan x="555" y="180">Amanhã às 10:20</tspan><tspan x="555" y="197">com Diego</tspan></text>
+<rect x="545" y="218" width="140" height="28" rx="8" fill="#fff"/><text x="615" y="237" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="11" fill="#0a7cb0">Opa, confirmo · Remarcar</text>
+<rect x="580" y="262" width="105" height="32" rx="10" fill="#d9fdd3"/><text x="592" y="283" font-family="Manrope,system-ui,sans-serif" font-size="12" fill="#17202b">Opa, confirmo</text>
+</svg>

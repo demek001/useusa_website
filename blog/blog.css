@@ -1,0 +1,24 @@
+/* Blog do Opa: artigos no mesmo visual minimalista (usa as cores e a fonte de /estilo.css). */
+.meta-post{color:var(--muted);font-size:.92rem;margin:-.4rem 0 1.4rem}
+.capa{display:block;width:100%;height:auto;border-radius:18px;margin:1.2rem 0 1.6rem;background:var(--soft)}
+article h2{font-size:1.35rem;margin:2.2rem 0 .5rem}
+article ul,article ol{padding-left:1.25rem}
+article li{margin:.35rem 0}
+.conta{background:var(--soft);border-radius:14px;padding:1rem 1.2rem;margin:1rem 0}
+.conta p{margin:.2rem 0}
+.checklist{list-style:none;padding:0}
+.checklist li{padding-left:1.7rem;position:relative}
+.checklist li::before{content:"☐";position:absolute;left:0;color:var(--coral);font-weight:800}
+.cta-post{margin:2.4rem 0 1rem;padding:1.6rem;border-radius:18px;background:var(--soft);text-align:center}
+.cta-post p{margin:.2rem auto 1rem}
+.bt{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font:800 1.05rem var(--fonte);padding:.9rem 1.5rem;border-radius:999px}
+.bt:hover{background:var(--coral-forte)}
+@media (prefers-color-scheme:dark){.bt,.bt:hover{color:#16110f}}
+.fontes{font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);margin-top:2rem;padding-top:1rem}
+.fontes a{color:var(--muted)}
+.lista-posts{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:1.6rem}
+.lista-posts li{max-width:none}
+.lista-posts a.titulo{font:800 1.25rem/1.25 var(--fonte);color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.lista-posts a.titulo:hover{color:var(--coral-forte)}
+.lista-posts p{margin:.3rem 0 0;color:var(--muted)}
+.lista-posts img{display:block;width:100%;max-width:22rem;height:auto;border-radius:14px;margin-bottom:.6rem;background:var(--soft)}

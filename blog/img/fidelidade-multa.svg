@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t"><title id="t">Ilustração: um contrato com lupa sobre a cláusula de multa e uma lista de conferência</title>
+<rect width="800" height="420" fill="#f4f4f1"/>
+<rect x="140" y="50" width="300" height="330" rx="16" fill="#fff" stroke="#17202b" stroke-width="5"/>
+<rect x="170" y="85" width="170" height="14" rx="7" fill="#17202b"/>
+<g fill="#e6e7e3"><rect x="170" y="125" width="240" height="10" rx="5"/><rect x="170" y="147" width="220" height="10" rx="5"/><rect x="170" y="169" width="230" height="10" rx="5"/><rect x="170" y="255" width="240" height="10" rx="5"/><rect x="170" y="277" width="200" height="10" rx="5"/><rect x="170" y="299" width="225" height="10" rx="5"/></g>
+<rect x="170" y="195" width="210" height="44" rx="8" fill="#fdeae6"/><rect x="182" y="207" width="120" height="10" rx="5" fill="#e0573f"/><rect x="182" y="223" width="160" height="8" rx="4" fill="#e0573f" opacity=".5"/>
+<path d="M200 345q20-22 40 0t40 0" fill="none" stroke="#17202b" stroke-width="4" stroke-linecap="round"/>
+<circle cx="330" cy="215" r="62" fill="none" stroke="#17202b" stroke-width="10"/><path d="M374 259l52 52" stroke="#17202b" stroke-width="16" stroke-linecap="round"/>
+<g font-family="Manrope,system-ui,sans-serif" font-size="22" font-weight="800" fill="#17202b">
+<rect x="500" y="95" width="30" height="30" rx="6" fill="#fff" stroke="#e0573f" stroke-width="4"/><path d="M507 110l7 7 12-14" fill="none" stroke="#e0573f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="545" y="118">Multa</text>
+<rect x="500" y="160" width="30" height="30" rx="6" fill="#fff" stroke="#e0573f" stroke-width="4"/><path d="M507 175l7 7 12-14" fill="none" stroke="#e0573f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="545" y="183">Renovação</text>
+<rect x="500" y="225" width="30" height="30" rx="6" fill="#fff" stroke="#e0573f" stroke-width="4"/><path d="M507 240l7 7 12-14" fill="none" stroke="#e0573f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="545" y="248">Cancelamento</text>
+<rect x="500" y="290" width="30" height="30" rx="6" fill="#fff" stroke="#17202b" stroke-width="4"/><text x="545" y="313">Seus dados</text></g>
+</svg>
