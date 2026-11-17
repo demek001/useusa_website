@@ -1,257 +1,273 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Opa — agenda pelo WhatsApp para barbearias e salões</title><meta name="description" content="O cliente agenda por um link, recebe a confirmação e o lembrete no WhatsApp, e o profissional fica sabendo de tudo sem atender o celular. 7 dias grátis.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/estilo.css">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UseUsa — Consultoria em crescimento e operação</title>
+<meta name="description" content="Encontro o gargalo que trava o crescimento da sua empresa e construo o caminho. Método dos cinco porquês, cases reais.">
+<link rel="canonical" href="https://useusa.com.br/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FAFAF9">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UseUsa">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="UseUsa — Consultoria em crescimento e operação">
+<meta property="og:description" content="Encontro o gargalo que trava o crescimento da sua empresa e construo o caminho. Método dos cinco porquês, cases reais.">
+<meta property="og:url" content="https://useusa.com.br/">
+<meta property="og:image" content="https://useusa.com.br/assets/og-useusa.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UseUsa — Consultoria em crescimento e operação">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-header,main,footer{max-width:68rem}
-main{padding:0}
-section{padding:3.5rem 1.25rem}
-.sec-titulo{font-size:clamp(1.6rem,4vw,2.3rem);margin:0 0 .5rem}
-/* Herói */
-.heroi{display:grid;gap:2.5rem;align-items:center;padding-top:2.5rem}
-@media (min-width:56rem){.heroi{grid-template-columns:1.1fr .9fr;padding-top:4rem}}
-.heroi h1{margin:0 0 1rem;font-size:clamp(2.2rem,6.5vw,3.7rem);max-width:15ch}
-.heroi .lead{font-size:1.2rem;max-width:34rem}
-.sem{display:flex;flex-wrap:wrap;gap:.4rem .9rem;margin:1.4rem 0 0;padding:0;list-style:none;font-weight:600}
-.sem li::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--coral);margin-right:.45rem;vertical-align:.1rem}
-.acoes{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;margin-top:1.8rem}
-.bt{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font:800 1.05rem var(--fonte);padding:.9rem 1.5rem;border-radius:999px;border:0;cursor:pointer}
-.bt:hover{background:var(--coral-forte)}
-@media (prefers-color-scheme:dark){.bt,.bt:hover{color:#16110f}}
-.link{font-weight:600;color:var(--ink);text-decoration:none}
-.link:hover{color:var(--coral-forte)}
-.link::after{content:" →"}
-.nota{color:var(--muted);font-size:.92rem;margin-top:1rem}
-.mock{width:100%;max-width:21rem;margin:0 auto;display:block;height:auto}
-/* Para quem */
-.publico{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;list-style:none;padding:0;margin:1rem 0 0}
-.publico li{display:flex;align-items:center;gap:.5rem;font-weight:600}
-.publico svg{width:22px;height:22px;stroke:var(--coral);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-/* Passos */
-.passos{display:grid;gap:1.6rem;margin-top:1.6rem;counter-reset:p;padding:0;list-style:none}
-@media (min-width:48rem){.passos{grid-template-columns:repeat(3,1fr)}}
-.passos li{max-width:none}
-.passos li::before{counter-increment:p;content:counter(p);display:block;font:800 2.4rem/1 var(--fonte);color:var(--coral);margin-bottom:.4rem}
-.passos h3{margin:0 0 .3rem;font-size:1.15rem}.passos p{margin:0;color:var(--muted)}
-/* Planos */
-.planos{display:grid;gap:1rem;margin-top:1.8rem;grid-auto-flow:column;grid-auto-columns:minmax(15.5rem,80%);overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem .2rem 1rem;margin-left:-.2rem;margin-right:-.2rem;-webkit-overflow-scrolling:touch}
-.plano{scroll-snap-align:start;display:flex;flex-direction:column;gap:.35rem;border:1px solid var(--line);border-radius:18px;padding:1.4rem;background:var(--paper)}
-.plano.destaque{border:2px solid var(--coral)}
-.selo{align-self:flex-start;background:var(--coral);color:#fff;font:800 .72rem var(--fonte);text-transform:uppercase;letter-spacing:.06em;padding:.25rem .6rem;border-radius:999px}
-@media (prefers-color-scheme:dark){.selo{color:#16110f}}
-.plano h3{margin:0;font-size:1.2rem}
-.preco{font:800 2rem/1.1 var(--fonte);margin:.2rem 0 0;letter-spacing:-.03em}
-.preco small{font:400 .95rem var(--fonte);color:var(--muted);letter-spacing:0}
-.plano .det{color:var(--muted);margin:0;font-size:.95rem}
-.plano .bt{margin-top:auto;text-align:center;font-size:.98rem;padding:.75rem 1rem}
-.plano .det+.bt,.plano .ref+.bt{margin-top:1rem}
-.ref{color:var(--muted);font-size:.85rem;margin:0}
-@media (min-width:56rem){
-  .planos{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(6,1fr);overflow:visible;scroll-snap-type:none;padding:0;margin-left:0;margin-right:0}
-  .plano{grid-column:span 2}
-  .plano:nth-child(4){grid-column:2 / span 2}
-}
-.dica-rolar{color:var(--muted);font-size:.85rem;margin:.2rem 0 0}
-@media (min-width:56rem){.dica-rolar{display:none}}
-.sob{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;margin-top:1.4rem;padding:1.4rem 1.6rem;border-radius:18px;background:var(--soft)}
-.sob p{margin:0;font:800 1.15rem var(--fonte)}
-.sob span{display:block;font:400 .95rem var(--fonte);color:var(--muted);margin-top:.2rem}
-.bt.contorno{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:.75rem 1.3rem}
-.bt.contorno:hover{border-color:var(--coral);color:var(--coral-forte);background:transparent}
-.gratis{font-weight:600;margin-top:1.2rem}
-.planos-nota{color:var(--muted);font-size:.9rem}
-/* Garantias */
-.garantias{display:grid;gap:1.6rem;margin:1.6rem 0 0;padding:0;list-style:none}
-@media (min-width:48rem){.garantias{grid-template-columns:repeat(3,1fr)}}
-.garantias li{max-width:none}
-.garantias strong{display:block;font-size:1.1rem;margin-bottom:.25rem}
-.garantias strong::before{content:"✓";color:var(--coral);margin-right:.45rem}
-.garantias span{color:var(--muted)}
-/* Final */
-.final{background:var(--soft);border-radius:24px;margin:1rem 1.25rem 0;text-align:center;padding:3rem 1.25rem}
-.final .sec-titulo,.final p{margin-left:auto;margin-right:auto}
-.final .acoes{justify-content:center}
-.final .mais{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.6rem;margin-top:1.4rem}
-/* Rodapé */
-footer{max-width:68rem}
-.rodape{display:grid;gap:1.2rem;grid-template-columns:1fr}
-@media (min-width:44rem){.rodape{grid-template-columns:2fr 1fr 1fr}}
-.rodape h3{font-size:.95rem;color:var(--ink);margin:0 0 .4rem}
-.rodape ul{list-style:none;padding:0;margin:0}.rodape li{margin:.25rem 0}
-.rodape p{margin:.3rem 0}
-/* Formulário sob medida */
-dialog{border:0;border-radius:20px;padding:0;width:min(34rem,calc(100% - 2rem));background:var(--paper);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.25)}
-dialog::backdrop{background:rgba(10,14,20,.55)}
-.dlg{padding:1.6rem}
-.dlg h2{margin:0 0 .3rem}
-.dlg .fechar{float:right;background:none;border:0;font:800 1.5rem var(--fonte);color:var(--muted);cursor:pointer;line-height:1}
-.form{display:grid;gap:.9rem;margin-top:1rem}
-.campo{display:flex;flex-direction:column;gap:.3rem;font-weight:600;font-size:.95rem}
-.campo input,.campo textarea{font:400 1rem var(--fonte);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:.65rem .75rem}
-.campo textarea{min-height:6rem;resize:vertical}
-.duas{display:grid;gap:.9rem;grid-template-columns:1fr 1fr}
-@media (max-width:30rem){.duas{grid-template-columns:1fr}}
-.aceite{display:flex;gap:.5rem;align-items:flex-start;cursor:pointer}
-.aceite input{width:1.15rem;height:1.15rem;margin-top:.25rem;accent-color:var(--coral);flex:none}
-.isca{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.msg{border-radius:12px;padding:.8rem 1rem;background:color-mix(in srgb,var(--coral) 12%,transparent)}
-[hidden]{display:none!important}
-</style></head><body>
-<header><a class="brand" href="/">Opa</a><nav><a href="/recursos/">Recursos</a><a href="/comparativo/">Comparativo</a><a href="/demo/">Demonstração</a><a href="/blog/">Blog</a><a class="bt-nav" href="/cadastro/">Testar grátis</a></nav></header>
-<main>
+body{margin:0;background:#FAFAF9}
+a{color:#111111}a:hover{color:#C2410C}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #C2410C;outline-offset:2px}
+[hidden]{display:none !important}
+html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div style="font-family: Inter, system-ui, -apple-system, sans-serif; color: #111111; background: #FAFAF9; line-height: 1.6">
 
-<section class="heroi">
-<div>
-<h1>Cliente que marca e não aparece. Celular que não para.</h1>
-<p class="lead">O Opa cuida da agenda pelo WhatsApp: o cliente marca por um link, recebe a confirmação e o lembrete, e você fica sabendo de tudo sem largar a tesoura.</p>
-<ul class="sem" aria-label="Como é"><li>Sem app</li><li>Sem cadastro</li><li>Sem recepcionista</li></ul>
-<div class="acoes"><a class="bt" href="/cadastro/">Testar 7 dias grátis</a><a class="link" href="/demo/">Ver como funciona</a></div>
-<p class="nota">Tudo pelo WhatsApp que o seu cliente já usa. Sem fidelidade e sem multa.</p>
+<header style="max-width: 1120px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#topo" style="font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 700; font-size: 20px; text-decoration: none; letter-spacing: -0.01em">UseUsa</a>
+<nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px">
+<a href="#metodo" style="text-decoration: none">Método</a>
+<a href="#cases" style="text-decoration: none">Cases</a>
+<a href="/sobre/" style="text-decoration: none">Sobre mim</a>
+<a href="#contato" style="text-decoration: none; background: #111111; color: #FFFFFF; padding: 12px 20px; border-radius: 999px; font-weight: 500">Agendar conversa</a>
+</nav>
+</header>
+
+<section id="topo" style="max-width: 1120px; margin: 0 auto; padding: 96px 24px 112px">
+<p style="margin: 0 0 24px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Crescimento e operação para pequenas e médias empresas</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(40px, 6vw, 76px); line-height: 1.04; letter-spacing: -0.03em; max-width: 920px">Sua empresa pode crescer mais. Eu encontro o gargalo e construo o caminho.</h1>
+<p style="margin: 32px 0 0; font-size: 20px; color: #4A4A48; max-width: 640px">Para quem quer vender mais, desperdiçar menos ou ainda não sabe por onde começar a crescer. Diagnóstico claro, solução prática.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 44px">
+<a href="#contato" style="background: #C2410C; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 16px">Quero conversar</a>
+<a href="#cases" style="font-weight: 500; font-size: 16px">Ver cases →</a>
 </div>
-<svg class="mock" viewBox="0 0 320 560" role="img" aria-label="Ilustração de uma conversa no WhatsApp: o cliente recebe a confirmação do horário e o lembrete da véspera, e responde: Opa, confirmo">
-<defs><clipPath id="tela"><rect x="14" y="14" width="292" height="532" rx="34"/></clipPath></defs>
-<rect x="4" y="4" width="312" height="552" rx="44" fill="#17202b"/>
-<g clip-path="url(#tela)">
-<rect x="14" y="14" width="292" height="532" fill="#efe7dd"/>
-<rect x="14" y="14" width="292" height="78" fill="#0b6b5d"/>
-<circle cx="52" cy="62" r="17" fill="#fcfcfa"/><text x="52" y="68" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="16" fill="#17202b">B</text>
-<text x="80" y="58" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="15" fill="#fff">Barbearia Exemplo</text>
-<text x="80" y="76" font-family="Manrope,system-ui,sans-serif" font-size="11" fill="#d6efe9">conta comercial</text>
-<rect x="28" y="110" width="232" height="96" rx="12" fill="#fff"/>
-<text font-family="Manrope,system-ui,sans-serif" font-size="12.5" fill="#17202b"><tspan x="42" y="134" font-weight="800">✅ Horário confirmado</tspan><tspan x="42" y="154">Corte e barba com Diego</tspan><tspan x="42" y="172">ter 18/11 às 10:20 · R$ 80,00</tspan></text>
-<text x="246" y="196" text-anchor="end" font-family="Manrope,system-ui,sans-serif" font-size="9.5" fill="#7a8791">10:12</text>
-<rect x="28" y="214" width="232" height="34" rx="10" fill="#fff"/><text x="144" y="236" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="12.5" fill="#0a7cb0">Remarcar · Cancelar</text>
-<rect x="118" y="266" width="84" height="20" rx="6" fill="#fff"/><text x="160" y="280" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-size="10" fill="#5d6672">Véspera</text>
-<rect x="28" y="298" width="244" height="80" rx="12" fill="#fff"/>
-<text font-family="Manrope,system-ui,sans-serif" font-size="12.5" fill="#17202b"><tspan x="42" y="322" font-weight="800">⏰ Lembrete de amanhã</tspan><tspan x="42" y="342">10:20 com Diego. Até lá!</tspan></text>
-<text x="258" y="368" text-anchor="end" font-family="Manrope,system-ui,sans-serif" font-size="9.5" fill="#7a8791">18:00</text>
-<rect x="28" y="386" width="244" height="34" rx="10" fill="#fff"/><text x="150" y="408" text-anchor="middle" font-family="Manrope,system-ui,sans-serif" font-weight="800" font-size="12.5" fill="#0a7cb0">Opa, confirmo · Remarcar</text>
-<rect x="150" y="438" width="140" height="40" rx="12" fill="#d9fdd3"/><text x="166" y="463" font-family="Manrope,system-ui,sans-serif" font-size="12.5" fill="#17202b">Opa, confirmo 👍</text>
-<rect x="28" y="490" width="200" height="40" rx="12" fill="#fff"/><text x="42" y="515" font-family="Manrope,system-ui,sans-serif" font-size="12.5" fill="#17202b">Combinado! Até amanhã.</text>
-</g>
-</svg>
 </section>
 
-<section aria-labelledby="t-quem">
-<h2 class="sec-titulo" id="t-quem">Para quem trabalha com hora marcada</h2>
-<ul class="publico">
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="18" r="3"/><path d="M9 15.5 18 4M15 15.5 6 4"/></svg>Barbearia</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10a7 7 0 0 1 14 0v2H5z"/><path d="M12 12v4"/><rect x="9" y="16" width="6" height="5" rx="1"/></svg>Salão</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="10" width="8" height="11" rx="2"/><path d="M10 10V7h4v3M11 7V3h2v4"/></svg>Manicure</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18M5 15a7 4 0 0 1 14 0"/><circle cx="12" cy="7" r="2"/><path d="M3 19h18"/></svg>Massagem</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/><rect x="3" y="8" width="4" height="8" rx="1"/><rect x="17" y="8" width="4" height="8" rx="1"/></svg>Personal trainer</li>
-</ul>
+<section style="background: #F1EFEA">
+<div style="max-width: 1120px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Você se reconhece?</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 760px">Se alguma dessas frases é sua, você está no lugar certo.</h2>
+<div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Sou o primeiro a chegar e o último a sair, e o faturamento não acompanha.”</p>
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Vendo bem, mas no fim do mês não sei para onde o dinheiro foi.”</p>
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Se eu tirar uma semana de férias, a empresa para.”</p>
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Recebo muitos pedidos de orçamento, mas poucos viram venda.”</p>
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Minha equipe vive apagando incêndio e ninguém sabe o que priorizar.”</p>
+<p style="margin: 0; background: #FFFFFF; border-radius: 16px; padding: 28px; font-size: 19px; font-weight: 500; line-height: 1.45">“Sei que dá para crescer, mas não sei qual é o próximo passo.”</p>
+</div>
+<div style="margin-top: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<p style="margin: 0; font-size: 20px; max-width: 640px">Nada disso é falta de esforço. É gargalo. E todo gargalo tem uma causa.</p>
+<a href="#contato" style="background: #111111; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 16px">Quero conversar</a>
+</div>
+</div>
 </section>
 
-<section aria-labelledby="t-como">
-<h2 class="sec-titulo" id="t-como">Como funciona</h2>
-<ol class="passos">
-<li><h3>Faça o cadastro</h3><p>Informe os profissionais, os serviços, os preços e os horários de trabalho.</p></li>
-<li><h3>Conecte o WhatsApp da barbearia</h3><p>As mensagens saem do seu próprio número. O WhatsApp Business no celular continua funcionando.</p></li>
-<li><h3>Divulgue o link de cada profissional</h3><p>No Instagram, no Google, na porta. O cliente escolhe o horário livre e pronto.</p></li>
+<section id="metodo" style="max-width: 1120px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Método</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 760px">Cinco porquês: da meta à solução.</h2>
+<p style="margin: 24px 0 0; font-size: 18px; color: #4A4A48; max-width: 640px">Antes de propor qualquer coisa, entendo o que trava o crescimento. Cada “por quê” é confirmado com dado, não com opinião.</p>
+<div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; padding: 36px; background: #FFFFFF; border: 1px solid #E7E5E0; border-radius: 16px">
+<div><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">De onde vem</p><p style="margin: 10px 0 0; font-size: 16px; color: #3A3A38">Criado por Sakichi Toyoda, fundador do grupo Toyota, nos anos 1930. Taiichi Ohno levou o método ao Sistema Toyota de Produção, base do que hoje se chama lean.</p></div>
+<div><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Por que cinco</p><p style="margin: 10px 0 0; font-size: 16px; color: #3A3A38">A primeira resposta quase sempre é o sintoma. Cada novo “por quê” desce uma camada, e por volta da quinta aparece o que de fato trava. O número é referência; a regra é não parar na resposta mais cômoda.</p></div>
+<div><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Por que eu uso</p><p style="margin: 10px 0 0; font-size: 16px; color: #3A3A38">Aplico em tudo: nos meus produtos, nas empresas por onde passei e nas decisões do dia a dia. Resolver a causa evita pagar pelo mesmo problema duas vezes.</p></div>
+</div>
+<ol style="list-style: none; margin: 64px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 32px">
+<li style="border-top: 2px solid #111111; padding-top: 20px"><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 14px; color: #C2410C; font-weight: 600">01</p><p style="margin: 8px 0 0; font-weight: 600; font-size: 18px">Objetivo</p><p style="margin: 6px 0 0; font-size: 15px; color: #5A5A57">Onde você quer chegar, ou o que incomoda hoje.</p></li>
+<li style="border-top: 2px solid #111111; padding-top: 20px"><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 14px; color: #C2410C; font-weight: 600">02</p><p style="margin: 8px 0 0; font-weight: 600; font-size: 18px">Cinco porquês</p><p style="margin: 6px 0 0; font-size: 15px; color: #5A5A57">Cada resposta validada com dado.</p></li>
+<li style="border-top: 2px solid #111111; padding-top: 20px"><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 14px; color: #C2410C; font-weight: 600">03</p><p style="margin: 8px 0 0; font-weight: 600; font-size: 18px">Gargalo</p><p style="margin: 6px 0 0; font-size: 15px; color: #5A5A57">O que realmente trava, em uma frase.</p></li>
+<li style="border-top: 2px solid #111111; padding-top: 20px"><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 14px; color: #C2410C; font-weight: 600">04</p><p style="margin: 8px 0 0; font-weight: 600; font-size: 18px">Solução</p><p style="margin: 6px 0 0; font-size: 15px; color: #5A5A57">Processo, automação ou produto.</p></li>
+<li style="border-top: 2px solid #111111; padding-top: 20px"><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 14px; color: #C2410C; font-weight: 600">05</p><p style="margin: 8px 0 0; font-weight: 600; font-size: 18px">Medição</p><p style="margin: 6px 0 0; font-size: 15px; color: #5A5A57">Antes e depois, em número.</p></li>
 </ol>
-</section>
-
-<section aria-labelledby="t-preco" id="planos">
-<h2 class="sec-titulo" id="t-preco">Você paga por mês, não por mensagem.</h2>
-<p class="lead">Preço fixo, do tamanho da sua equipe. 7 dias grátis em todos os planos.</p>
-<div class="planos" role="list">
-<div class="plano" role="listitem"><h3>Solo</h3><p class="preco">R$ 56,50 <small>/mês</small></p><p class="det">1 profissional</p><a class="bt" href="/cadastro/?plano=solo">Testar o Solo</a></div>
-<div class="plano" role="listitem"><h3>Time</h3><p class="preco">R$ 86,50 <small>/mês</small></p><p class="det">2 a 4 profissionais</p><a class="bt" href="/cadastro/?plano=time">Testar o Time</a></div>
-<div class="plano destaque" role="listitem"><span class="selo">Recomendado</span><h3>Premium</h3><p class="preco">R$ 146,50 <small>/mês</small></p><p class="det">até 6 profissionais</p><a class="bt" href="/cadastro/?plano=premium">Testar o Premium</a></div>
-<div class="plano" role="listitem"><h3>Deluxe</h3><p class="preco">R$ 246,50 <small>/mês</small></p><p class="det">até 12 profissionais</p><p class="ref">Porte de referência: cerca de 2.200 agendamentos por mês</p><a class="bt" href="/cadastro/?plano=deluxe">Testar o Deluxe</a></div>
-<div class="plano" role="listitem"><h3>Império</h3><p class="preco">R$ 366,50 <small>/mês</small></p><p class="det">até 20 profissionais</p><p class="ref">Porte de referência: cerca de 3.600 agendamentos por mês</p><a class="bt" href="/cadastro/?plano=imperio">Testar o Império</a></div>
+<div style="margin-top: 72px; background: #FFFFFF; border: 1px solid #E7E5E0; border-radius: 20px; padding: clamp(24px, 4vw, 48px)">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Exemplo ilustrativo</p>
+<h3 style="margin: 10px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: clamp(24px, 3vw, 32px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">“Minha equipe vive apagando incêndio e ninguém sabe o que priorizar.”</h3>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 48px">
+<ol style="flex: 1 1 420px; min-width: 0; list-style: none; margin: 0; padding: 0">
+<li style="display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #ECEAE5"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #C2410C; font-weight: 600; min-width: 24px">1</span><span><strong style="font-weight: 600">Por que a equipe vive apagando incêndio?</strong> <span style="color: #4A4A48">Os mesmos problemas voltam toda semana.</span></span></li>
+<li style="display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #ECEAE5"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #C2410C; font-weight: 600; min-width: 24px">2</span><span><strong style="font-weight: 600">Por que voltam?</strong> <span style="color: #4A4A48">Ninguém registra o que deu errado nem por quê.</span></span></li>
+<li style="display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #ECEAE5"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #C2410C; font-weight: 600; min-width: 24px">3</span><span><strong style="font-weight: 600">Por que ninguém registra?</strong> <span style="color: #4A4A48">Não existe um momento na rotina para isso.</span></span></li>
+<li style="display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid #ECEAE5"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #C2410C; font-weight: 600; min-width: 24px">4</span><span><strong style="font-weight: 600">Por que não existe?</strong> <span style="color: #4A4A48">Toda decisão passa pelo dono, que não tem tempo.</span></span></li>
+<li style="display: flex; gap: 18px; padding: 16px 0"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #C2410C; font-weight: 600; min-width: 24px">5</span><span><strong style="font-weight: 600">Por que tudo passa pelo dono?</strong> <span style="color: #4A4A48">Não há prioridades nem responsáveis definidos.</span></span></li>
+</ol>
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Causa raiz</p><p style="margin: 8px 0 0; font-size: 19px; font-weight: 500">Ninguém sabe quem decide o quê, nem o que vem primeiro. Não é falta de gente.</p></div>
+<div><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Solução</p><p style="margin: 8px 0 0; font-size: 16px; color: #4A4A48">Três prioridades por semana, um responsável por área e 15 minutos semanais para registrar o que se repete e eliminar a causa.</p></div>
+<p style="margin: 0; padding: 20px; background: #F1EFEA; border-radius: 12px; font-size: 16px">Sem os cinco porquês, a saída óbvia seria contratar mais gente. Aumentaria o custo e o incêndio continuaria.</p>
 </div>
-<p class="dica-rolar">Deslize para o lado para ver todos os planos.</p>
-<div class="sob"><p>Mais de 20 profissionais? Conte sua necessidade.<span>Montamos um plano sob medida para redes e espaços grandes.</span></p><button class="bt contorno" type="button" id="abrir-sob">Falar sobre um plano sob medida</button></div>
-<p class="planos-nota">Os agendamentos servem só de referência de porte: não há limite de agendamentos nem cobrança por mensagem.</p>
+</div>
+</div>
 </section>
 
-<section aria-labelledby="t-garantias">
-<h2 class="sec-titulo" id="t-garantias">Nossas garantias</h2>
-<ul class="garantias">
-<li><strong>A agenda nunca trava</strong><span>Se o pagamento atrasar, a agenda fica em modo de leitura. Nada some e nenhum cliente perde o horário.</span></li>
-<li><strong>Sem fidelidade e sem multa</strong><span>Para sair, basta uma mensagem. Seus dados podem ser exportados.</span></li>
-<li><strong>Nunca segura o seu dinheiro</strong><span>O cliente paga você. A cota de cada profissional vai direto para a chave Pix do dono.</span></li>
+<section id="cases" style="background: #111111; color: #F5F5F4">
+<div style="max-width: 1120px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Cases</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em; max-width: 760px">Empresas e produtos onde encontrei o gargalo.</h2>
+
+<div style="margin-top: 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; border-top: 1px solid #3A3A38; padding-top: 48px">
+<article>
+<p style="margin: 0; font-size: 14px; color: #A8A29E">Consultoria · Gastronomia · Santos</p>
+<h3 style="margin: 8px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Restaurante centenário</h3>
+<p style="margin: 16px 0 0; font-size: 17px; color: #D6D3D1">Queria crescer e não sabia por onde.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">O que eu fiz</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">Análise de mercado da região, do fluxo de pessoas e do público-alvo. Ajustes e novidades no cardápio, posicionamento, promoções e eventos.</p>
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 40px">
+<div><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; color: #FB923C">+80%</p><p style="margin: 0; font-size: 15px; color: #D6D3D1">novos clientes</p></div>
+<div><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; color: #FB923C">+30%</p><p style="margin: 0; font-size: 15px; color: #D6D3D1">clientes recorrentes</p></div>
+</div>
+</article>
+<article>
+<p style="margin: 0; font-size: 14px; color: #A8A29E">Consultoria · Varejo automotivo · Santa Catarina</p>
+<h3 style="margin: 8px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.02em">Maior rede de concessionárias do estado</h3>
+<p style="margin: 16px 0 0; font-size: 17px; color: #D6D3D1">Precisava vender mais e manter o cliente depois da compra.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">O que eu fiz</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">Treinamento da equipe de vendas em atendimento e técnica de venda. Análise do fluxo de pós-venda.</p>
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 40px">
+<div><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; color: #FB923C">+20%</p><p style="margin: 0; font-size: 15px; color: #D6D3D1">vendas no primeiro mês</p></div>
+<div><p style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 44px; font-weight: 600; letter-spacing: -0.02em; color: #FB923C">+50%</p><p style="margin: 0; font-size: 15px; color: #D6D3D1">retenção no pós-venda</p></div>
+</div>
+</article>
+</div>
+
+<p style="margin: 96px 0 0; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Produtos próprios</p>
+
+<article style="margin-top: 72px; display: flex; flex-wrap: wrap; gap: 56px; border-top: 1px solid #3A3A38; padding-top: 48px">
+<div style="flex: 1 1 320px; min-width: 0">
+<p style="margin: 0; font-size: 14px; color: #A8A29E">Pagamentos · Pix</p>
+<h3 style="margin: 8px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">Flowt</h3>
+<p style="margin: 16px 0 0; font-size: 17px; color: #D6D3D1">Cliente abandona a compra no momento de pagar com Pix.</p>
+<p style="margin: 32px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Causa raiz</p>
+<p style="margin: 8px 0 0; font-size: 19px; font-weight: 500">O checkout não lembra o banco do cliente. Não é falta de tecnologia.</p>
+<p style="margin: 32px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Solução</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">Banco salvo, código copiado sozinho e app do banco aberto direto. Seis a sete passos viram três.</p>
+<p style="margin: 32px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Entregue</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">API em sandbox aderente à especificação Pix do Banco Central, 9 bancos e 92 testes automatizados. Modelo de negócio e entrada no mercado estruturados.</p>
+</div>
+<ol style="flex: 1 1 420px; min-width: 0; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
+<li style="display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid #2E2E2C"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #FB923C; font-weight: 600; min-width: 28px">1</span><span><strong style="font-weight: 600">Por que abandona?</strong> <span style="color: #D6D3D1">O pagamento leva de 15 a 25 segundos.</span></span></li>
+<li style="display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid #2E2E2C"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #FB923C; font-weight: 600; min-width: 28px">2</span><span><strong style="font-weight: 600">Por que tanto tempo?</strong> <span style="color: #D6D3D1">São cinco etapas manuais.</span></span></li>
+<li style="display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid #2E2E2C"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #FB923C; font-weight: 600; min-width: 28px">3</span><span><strong style="font-weight: 600">Por que manuais?</strong> <span style="color: #D6D3D1">Copiar, trocar de app, achar o Pix, colar, voltar.</span></span></li>
+<li style="display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid #2E2E2C"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #FB923C; font-weight: 600; min-width: 28px">4</span><span><strong style="font-weight: 600">Por que trocar de app é manual?</strong> <span style="color: #D6D3D1">O checkout não sabe qual banco o cliente usa.</span></span></li>
+<li style="display: flex; gap: 20px; padding: 18px 0"><span style="font-family: 'Space Grotesk', Inter, sans-serif; color: #FB923C; font-weight: 600; min-width: 28px">5</span><span><strong style="font-weight: 600">Por que não sabe?</strong> <span style="color: #D6D3D1">Ninguém guarda essa preferência no fluxo.</span></span></li>
+</ol>
+</article>
+
+<div style="margin-top: 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; border-top: 1px solid #3A3A38; padding-top: 48px">
+<article>
+<p style="margin: 0; font-size: 14px; color: #A8A29E">Serviços com hora marcada · No ar</p>
+<h3 style="margin: 8px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">Opa</h3>
+<p style="margin: 16px 0 0; font-size: 17px; color: #D6D3D1">Cliente marca e não aparece. O celular do dono não para.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Causa raiz</p>
+<p style="margin: 8px 0 0; font-size: 19px; font-weight: 500">Confirmar horário depende de alguém atender o telefone.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Solução</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">Agenda pelo WhatsApp oficial: link por profissional, confirmação e lembrete automáticos. Sem app, sem recepcionista.</p>
+<p style="margin: 28px 0 0; font-size: 16px"><a href="/opa/" style="color: #F5F5F4">Conhecer o Opa →</a></p>
+</article>
+<article>
+<p style="margin: 0; font-size: 14px; color: #A8A29E">Finanças pessoais · No ar desde ago/2026</p>
+<h3 style="margin: 8px 0 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">Notinha</h3>
+<p style="margin: 16px 0 0; font-size: 17px; color: #D6D3D1">Quem tenta controlar gastos abandona a ferramenta em semanas.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Causa raiz</p>
+<p style="margin: 8px 0 0; font-size: 19px; font-weight: 500">Digitar é trabalho. E o extrato só mostra o total da loja, nunca os itens.</p>
+<p style="margin: 28px 0 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FB923C">Solução</p>
+<p style="margin: 8px 0 0; font-size: 16px; color: #D6D3D1">Foto da nota fiscal no WhatsApp vira linha por item na planilha do próprio usuário. [NÚMERO] notas processadas.</p>
+<p style="margin: 28px 0 0; font-size: 16px"><a href="https://usenotinha.com.br/" style="color: #F5F5F4">usenotinha.com.br →</a></p>
+</article>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1120px; margin: 0 auto; padding: 112px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 520px; min-width: 0">
+<p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C2410C">Quem está por trás</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.02em; max-width: 720px">Mais de 15 anos encontrando gargalos em montadoras, seguros, varejo, restaurantes e nos meus próprios produtos.</h2>
+</div>
+<a href="/sobre/" style="background: #111111; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 16px">Sobre mim</a>
+</div>
+</section>
+
+
+<section id="contato" style="background: #F1EFEA">
+<div style="max-width: 1120px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; justify-content: space-between">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-weight: 600; font-size: clamp(32px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.02em">Trabalha muito e a empresa não sai do lugar?</h2>
+<ul style="list-style: none; margin: 28px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 18px; color: #3A3A38">
+<li style="display: flex; gap: 12px"><span style="color: #C2410C; font-weight: 600">—</span><span>Vende, mas não sobra.</span></li>
+<li style="display: flex; gap: 12px"><span style="color: #C2410C; font-weight: 600">—</span><span>Tudo depende de você.</span></li>
+<li style="display: flex; gap: 12px"><span style="color: #C2410C; font-weight: 600">—</span><span>Quer crescer e não sabe por onde.</span></li>
 </ul>
-<p><a class="link" href="/seguranca/">Todas as garantias e como protegemos os seus dados</a></p>
-</section>
-
-<section class="final" aria-labelledby="t-final">
-<h2 class="sec-titulo" id="t-final">Experimente na sua barbearia</h2>
-<p class="lead">7 dias grátis, sem fidelidade e sem multa.</p>
-<div class="acoes"><a class="bt" href="/cadastro/">Testar 7 dias grátis</a><a class="link" href="/demo/">Ver como funciona</a></div>
-<div class="mais"><a class="link" href="/recursos/">Todos os recursos</a><a class="link" href="/comparativo/">Comparativo com outras agendas</a></div>
-</section>
-
-</main>
-<footer><div class="rodape">
-<div><a class="brand" href="/">Opa</a><p>Agenda pelo WhatsApp para quem trabalha com hora marcada.</p><p>Opa · CNPJ 66.824.150/0001-28</p></div>
-<div><h3>Ajuda</h3><ul><li><a href="mailto:contato@useusa.com.br?subject=Suporte%20Opa">Suporte</a></li><li><a href="/seguranca/">Segurança</a></li><li><a href="/demo/">Demonstração</a></li><li><a href="/blog/">Blog</a></li></ul></div>
-<div><h3>Legal</h3><ul><li><a href="/termos/">Termos de uso</a></li><li><a href="/privacidade/">Privacidade</a></li><li><a href="/exclusao-de-dados/">Exclusão de dados</a></li></ul></div>
-</div></footer>
-
-<dialog id="dlg-sob" aria-labelledby="sob-titulo"><div class="dlg">
-<button class="fechar" type="button" id="fechar-sob" aria-label="Fechar">×</button>
-<h2 id="sob-titulo">Plano sob medida</h2>
-<p class="lead" style="font-size:1rem;margin:0">Conte sobre o seu espaço. Respondemos por e-mail ou WhatsApp.</p>
-<form class="form" id="form-sob" novalidate>
-<label class="campo">Seu nome<input name="nome" required minlength="2" maxlength="80" autocomplete="name"></label>
-<label class="campo">Nome do estabelecimento<input name="estabelecimento" required minlength="2" maxlength="100" autocomplete="organization"></label>
-<label class="campo">Quantos profissionais?<input name="profissionais" type="number" required min="1" max="1000" inputmode="numeric" value="21"></label>
-<div class="duas">
-<label class="campo">WhatsApp<input name="whatsapp" type="tel" required inputmode="tel" autocomplete="tel-national" placeholder="(13) 99999-9999" maxlength="20"></label>
-<label class="campo">E-mail<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+<p style="margin: 28px 0 0; font-size: 18px; font-weight: 600; color: #111111">Se alguma dessas é você, vamos conversar.</p>
 </div>
-<label class="campo">Mensagem<textarea name="mensagem" required maxlength="1000" placeholder="Quantas unidades, o que precisa, como atende hoje…"></textarea></label>
-<label class="isca" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
-<label class="aceite"><input type="checkbox" name="aceite" required> Aceito ser contatado por e-mail e WhatsApp sobre o Opa.</label>
-<div class="msg" id="erro-sob" role="alert" hidden></div>
-<button class="bt" type="submit" id="enviar-sob">Enviar</button>
+<form id="form-contato" novalidate aria-label="Agendar conversa" style="flex: 1 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #E7E5E0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="empresa" style="font-size: 14px; font-weight: 500">Nome da empresa</label><input id="empresa" name="empresa" type="text" required minlength="2" maxlength="100" autocomplete="organization" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="nome" style="font-size: 14px; font-weight: 500">Seu nome</label><input id="nome" name="nome" type="text" required minlength="2" maxlength="80" autocomplete="name" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="cargo" style="font-size: 14px; font-weight: 500">Cargo</label><input id="cargo" name="cargo" type="text" maxlength="80" autocomplete="organization-title" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="faturamento" style="font-size: 14px; font-weight: 500">Faturamento médio mensal</label><select id="faturamento" name="faturamento" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"><option value="">Selecione</option><option value="ate_50k">Até R$ 50 mil</option><option value="50k_150k">R$ 50 mil a R$ 150 mil</option><option value="150k_350k">R$ 150 mil a R$ 350 mil</option><option value="350k_650k">R$ 350 mil a R$ 650 mil</option><option value="650k_1m">R$ 650 mil a R$ 1 milhão</option><option value="acima_1m">Acima de R$ 1 milhão</option></select></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="email" style="font-size: 14px; font-weight: 500">E-mail</label><input id="email" name="email" type="email" required maxlength="120" autocomplete="email" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="whatsapp" style="font-size: 14px; font-weight: 500">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" required maxlength="20" inputmode="tel" autocomplete="tel-national" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111"></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><label for="mensagem" style="font-size: 14px; font-weight: 500">O que você quer resolver ou onde quer chegar?</label><textarea id="mensagem" name="mensagem" rows="5" required maxlength="1000" placeholder="Ex.: “Recebo muitos pedidos de orçamento, mas poucos viram venda.” ou “Quero crescer, mas não sei qual é o próximo passo.”" style="width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1px solid #CFCBC3; border-radius: 10px; font: inherit; font-size: 16px; background: #FFFFFF; color: #111111; resize: vertical"></textarea></div>
+<label aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+<p id="erro-contato" role="alert" hidden style="margin: 0; padding: 14px 16px; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 10px; color: #991B1B; font-size: 15px"></p>
+<button type="submit" id="enviar" style="align-self: flex-start; background: #C2410C; color: #FFFFFF; border: 0; padding: 16px 32px; border-radius: 999px; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer">Enviar</button>
 </form>
-<div id="ok-sob" role="status" tabindex="-1" hidden><p class="lead" style="margin-top:1rem"><strong>Recebido!</strong> Entraremos em contato em breve.</p><button class="bt contorno" type="button" id="fechar-ok">Fechar</button></div>
-</div></dialog>
+<div id="ok-contato" role="status" tabindex="-1" hidden style="flex: 1 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #E7E5E0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 8px; box-sizing: border-box"><p style="margin: 0; font-size: 20px; font-weight: 600">Recebido. Respondo em até um dia útil.</p></div>
+</div>
+</section>
 
+<footer style="max-width: 1120px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 14px; color: #5A5A57">
+<span>UseUsa</span>
+<span>Consultoria em crescimento e operação · <a href="/sobre/" style="color: #5A5A57">Sobre mim</a></span>
+</footer>
+
+</div>
 <script>
 (() => {
   "use strict";
-  // Formulário sob medida: envia para a função usab_leads (tipo sob_medida). Nada de chave na página.
+  // Formulário da consultoria: envia para a função usab_leads (tipo consultoria). Nada de chave na página.
+  // Mesmo anti-robô do Opa: campo-isca "site" e "d" = tempo na página medido no aparelho (performance.now não depende
+  // do relógio do celular). A função descarta, sem avisar, envio com menos de 3 s.
   const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8791/" : "https://api.usenotinha.com.br/functions/v1/usab_leads";
-  const dlg = document.getElementById("dlg-sob"), form = document.getElementById("form-sob"), erro = document.getElementById("erro-sob"),
-        bt = document.getElementById("enviar-sob"), ok = document.getElementById("ok-sob");
-  let aberto = 0;
-  const abrir = () => { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); aberto = performance.now(); };
-  const fechar = () => { if (typeof dlg.close === "function") dlg.close(); else dlg.removeAttribute("open"); };
-  document.getElementById("abrir-sob").addEventListener("click", abrir);
-  document.getElementById("fechar-sob").addEventListener("click", fechar);
-  document.getElementById("fechar-ok").addEventListener("click", fechar);
-  dlg.addEventListener("click", (ev) => { if (ev.target === dlg) fechar(); });
-  if (location.hash === "#sob-medida") abrir();
-  const nomes = { nome: "seu nome", estabelecimento: "o nome do estabelecimento", profissionais: "quantos profissionais", whatsapp: "o WhatsApp", email: "o e-mail", mensagem: "a mensagem", aceite: "o aceite para ser contatado" };
+  const montado = performance.now();
+  const form = document.getElementById("form-contato"), erro = document.getElementById("erro-contato"),
+        bt = document.getElementById("enviar"), ok = document.getElementById("ok-contato");
+  const nomes = { empresa: "o nome da empresa", nome: "o seu nome", cargo: "o cargo", email: "o e-mail", whatsapp: "o WhatsApp, com DDD", mensagem: "a mensagem" };
+  const falhou = (txt) => { erro.textContent = txt; erro.hidden = false; };
   form.addEventListener("submit", async (ev) => {
     ev.preventDefault();
     erro.hidden = true;
     if (!form.checkValidity()) {
       const p = form.querySelector(":invalid");
-      erro.textContent = `Confira ${nomes[p?.name] || "os campos"}.`; erro.hidden = false; p?.focus();
+      falhou(`Não enviado. Confira ${nomes[p?.name] || "os campos"} e tente de novo.`); p?.focus();
       return;
     }
     const f = new FormData(form);
-    const dados = { tipo: "sob_medida", plano: "sob_medida", nome: f.get("nome"), estabelecimento: f.get("estabelecimento"), profissionais: Number(f.get("profissionais")),
-      whatsapp: f.get("whatsapp"), email: f.get("email"), mensagem: f.get("mensagem"), aceite: f.get("aceite") === "on", site: f.get("site") || "",
-      d: Math.round(performance.now() - aberto) };
+    const dados = { tipo: "consultoria", empresa: f.get("empresa"), nome: f.get("nome"), cargo: f.get("cargo") || "",
+      faturamento: f.get("faturamento") || "", email: f.get("email"), whatsapp: f.get("whatsapp"), mensagem: f.get("mensagem"),
+      site: f.get("site") || "", d: Math.round(performance.now() - montado) };
     bt.disabled = true; bt.textContent = "Enviando…";
     try {
       const r = await fetch(API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(dados) });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.ok) throw new Error(j.mensagem || "Não consegui enviar agora. Tente de novo em alguns minutos.");
+      if (!r.ok || !j.ok) throw new Error(j.mensagem ? `Não enviado. ${j.mensagem}${/tente de novo/i.test(j.mensagem) ? "" : " Corrija e tente de novo."}` : "Não enviado. O servidor não respondeu. Tente de novo em alguns minutos.");
       form.hidden = true; ok.hidden = false; ok.focus();
     } catch (e) {
-      erro.textContent = e instanceof TypeError ? "Sem conexão. Confira a internet e tente de novo." : e.message; erro.hidden = false;
+      falhou(e instanceof TypeError ? "Não enviado. Sem conexão com o servidor. Confira a internet e tente de novo." : e.message);
       bt.disabled = false; bt.textContent = "Enviar";
     }
   });
 })();
 </script>
-</body></html>
+</body>
+</html>

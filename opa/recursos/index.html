@@ -1,0 +1,86 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Recursos — Opa</title><meta name="description" content="Tudo o que o Opa faz: link de agendamento por barbeiro, lembrete na véspera, "Chegou? Pagou?", fechamento com extrato e chave Pix do dono, painel com meta da semana.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/opa/estilo.css">
+<style>
+.grupo{margin-top:2.6rem}
+.grupo>h2{margin-top:0}
+.rec{display:grid;grid-template-columns:2.4rem 1fr;gap:.2rem 1rem;margin:1.4rem 0;align-items:start}
+.rec .n{font:800 1.05rem/1.6 var(--fonte);color:var(--red)}
+.rec h3{margin:0;font:600 1.05rem/1.4 var(--fonte);letter-spacing:-.01em}
+.rec p{margin:.2rem 0 0}
+.garantias{list-style:none;padding:0;margin:1rem 0}
+.garantias li{padding:.7rem 0;border-top:1px solid var(--line)}
+.garantias li:last-child{border-bottom:1px solid var(--line)}
+.garantias strong{font-family:var(--fonte)}
+.nota{color:var(--muted);font-size:.9rem;border-left:3px solid var(--line);padding-left:.9rem;margin-top:2rem}
+.cta{margin-top:2rem}.cta a{font:600 1rem var(--fonte);margin-right:1.25rem}
+.planos{display:grid;gap:.9rem;margin:1rem 0;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}
+.plano{border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
+.plano h3{margin:0;font:800 1.15rem var(--fonte)}
+.plano .preco{font:800 1.7rem/1.2 var(--fonte);margin:.35rem 0 .1rem}
+.plano .preco small{font:500 .9rem var(--fonte);color:var(--muted)}
+.plano p{margin:0;color:var(--muted);font-size:.95rem}
+.gratis{font-weight:600}
+.rec{grid-template-columns:2.4rem 1fr}
+.shot{grid-column:2;margin:.8rem 0 .4rem}
+.shot img{display:block;width:min(15rem,70vw);height:auto;border-radius:22px;border:1px solid var(--line);background:#fff}
+@media (min-width:44rem){.rec{grid-template-columns:2.4rem 1fr 13rem}.shot{grid-column:3;grid-row:1/span 2;margin:0}.shot img{width:13rem}}
+</style></head><body>
+<header><a class="brand" href="/opa/">Opa</a><nav><a href="/opa/recursos/">Recursos</a><a href="/opa/comparativo/">Comparativo</a><a href="/opa/demo/">Demonstração</a><a href="/opa/blog/">Blog</a><a class="bt-nav" href="/opa/cadastro/">Testar grátis</a></nav></header><main>
+<h1>A recepcionista da barbearia, no WhatsApp.</h1>
+<p class="lead">O cliente agenda por um link, sem aplicativo e sem cadastro. O barbeiro recebe tudo no WhatsApp. O dono vê o movimento, a meta e as cotas num painel.</p>
+
+<section class="grupo" aria-labelledby="g-cliente">
+<h2 id="g-cliente">Para o cliente</h2>
+<div class="rec"><span class="n">01</span><div><h3>Um link para cada barbeiro</h3><p>Cada profissional tem o próprio endereço, com foto, serviços, preços e duração. A barbearia divulga no Instagram, no Google ou na porta.</p></div><figure class="shot"><img src="/opa/recursos/img/link.webp" width="380" height="635" loading="lazy" decoding="async" alt="Tela do link do barbeiro Diego na Barbearia Exemplo, com a escolha do barbeiro e a lista de serviços com preço e duração"></figure></div>
+<div class="rec"><span class="n">02</span><div><h3>Agenda sem aplicativo e sem cadastro</h3><p>O cliente escolhe o serviço, o dia e o horário livre, informa nome e WhatsApp e confirma. Não precisa baixar nada nem criar senha.</p></div><figure class="shot"><img src="/opa/recursos/img/horarios.webp" width="380" height="544" loading="lazy" decoding="async" alt="Tela de horários livres: dias da semana e horários disponíveis para o serviço escolhido"></figure></div>
+<div class="rec"><span class="n">03</span><div><h3>Confirmação, remarcação e cancelamento</h3><p>Depois de confirmar, o cliente recebe os botões para pôr na agenda do celular, remarcar ou cancelar. O horário é liberado na hora para outro cliente.</p></div><figure class="shot"><img src="/opa/recursos/img/confirmado.webp" width="380" height="550" loading="lazy" decoding="async" alt="Tela de horário confirmado, com os botões para pôr na agenda do celular e para remarcar ou cancelar"></figure></div>
+<div class="rec"><span class="n">04</span><div><h3>Lembrete na véspera</h3><p>Na véspera, o cliente recebe o lembrete do horário no WhatsApp, com a opção de remarcar ou cancelar. Menos cadeira vazia por esquecimento.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-lembrete.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do cliente com o lembrete da véspera e os botões Confirmo, Remarcar e Cancelar"></figure></div>
+</section>
+
+<section class="grupo" aria-labelledby="g-barbeiro">
+<h2 id="g-barbeiro">Para o barbeiro</h2>
+<div class="rec"><span class="n">05</span><div><h3>Avisos no WhatsApp</h3><p>Novo agendamento, remarcação e cancelamento chegam no WhatsApp, com o nome do cliente, o serviço e o horário. Na véspera, o resumo do dia seguinte.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-aviso.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do barbeiro com o aviso de novo agendamento: cliente, serviço, dia, horário e valor"></figure></div>
+<div class="rec"><span class="n">06</span><div><h3>"Chegou? Pagou?"</h3><p>No fim de cada horário, o barbeiro toca em <em>Chegou</em> ou <em>Não veio</em> e depois em <em>Pix</em>, <em>Cartão</em> ou <em>Dinheiro</em>. Dois toques e o atendimento está registrado.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-chegou.webp" width="380" height="558" loading="lazy" decoding="async" alt="Conversa no WhatsApp do barbeiro: "O cliente chegou?", resposta Chegou, "Como pagou?", resposta Pix e o registro confirmado"></figure></div>
+<div class="rec"><span class="n">07</span><div><h3>Bloqueio de agenda por mensagem</h3><p>"Bloqueia sexta das 14h às 16h", por texto ou áudio. O Opa confirma o período antes de bloquear e mostra quem já estava marcado. Nada é cancelado sozinho.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-bloqueio.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do barbeiro: pedido para bloquear sexta das 14h às 16h, confirmação do período e aviso de quem já estava marcado"></figure></div>
+<div class="rec"><span class="n">08</span><div><h3>Agenda na palma da mão</h3><p>"Agenda hoje", "próximo cliente", "semana": o barbeiro pergunta e a resposta chega no WhatsApp.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-agenda.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do barbeiro: mensagem "agenda hoje" e a resposta com os horários do dia"></figure></div>
+</section>
+
+<section class="grupo" aria-labelledby="g-dono">
+<h2 id="g-dono">Para o dono</h2>
+<div class="rec"><span class="n">09</span><div><h3>Fechamento por cadência, com extrato</h3><p>Semanal, quinzenal ou mensal, para cada barbeiro. O extrato chega no WhatsApp dele com os atendimentos, o faturado por Pix, cartão e dinheiro, a cota da casa e a chave Pix do dono. O barbeiro toca em <em>Já paguei</em> e o dono confirma no painel.</p></div><figure class="shot"><img src="/opa/recursos/img/fechamento.webp" width="380" height="685" loading="lazy" decoding="async" alt="Tela do fechamento do barbeiro Diego: extrato com atendimentos, faturado por Pix, cartão e dinheiro, cota da casa e chave Pix fictícia do dono"></figure></div>
+<div class="rec"><span class="n">10</span><div><h3>Painel com meta da semana e do mês</h3><p>Quanto fica com a casa (a cota de cada barbeiro mais os atendimentos do dono), quanto já está marcado e quanto falta para a meta, dia a dia. Verde, amarelo ou vermelho.</p></div><figure class="shot"><img src="/opa/recursos/img/painel.webp" width="380" height="563" loading="lazy" decoding="async" alt="Painel do dono com a meta da semana: valor previsto, realizado, agendado, quanto falta e o gráfico por dia com a meta do dia"></figure></div>
+<div class="rec"><span class="n">11</span><div><h3>Resumo semanal no WhatsApp</h3><p>Toda segunda de manhã: como foi a semana que passou, o previsto para a semana que começa e quanto falta para a meta.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-resumo.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do dono com o resumo semanal: semana passada, meta batida, previsto da semana e quanto falta"></figure></div>
+<div class="rec"><span class="n">12</span><div><h3>Números que importam</h3><p>Faturamento, ticket médio, ocupação, faltas, cancelamentos, clientes novos e recorrentes, por barbeiro e da barbearia toda. Planilha para baixar quando quiser.</p></div><figure class="shot"><img src="/opa/recursos/img/numeros.webp" width="380" height="704" loading="lazy" decoding="async" alt="Painel do dono com os números do mês: faturamento, atendimentos, ticket médio, ocupação, faltas e clientes novos"></figure></div>
+<div class="rec"><span class="n">13</span><div><h3>O número da própria barbearia</h3><p>As mensagens saem do WhatsApp da barbearia, pela API oficial do WhatsApp. O WhatsApp Business no celular continua funcionando como hoje.</p></div><figure class="shot"><img src="/opa/recursos/img/wa-confirmacao.webp" width="380" height="544" loading="lazy" decoding="async" alt="Conversa no WhatsApp do cliente com a confirmação do horário enviada pela conta comercial da Barbearia Exemplo"></figure></div>
+</section>
+
+<section class="grupo" aria-labelledby="g-precos"><h2 id="g-precos">Planos</h2>
+<div class="planos">
+<div class="plano"><h3>Solo</h3><p class="preco">R$ 56,50 <small>por mês</small></p><p>1 profissional</p></div>
+<div class="plano"><h3>Time</h3><p class="preco">R$ 86,50 <small>por mês</small></p><p>2 a 4 profissionais</p></div>
+<div class="plano"><h3>Premium</h3><p class="preco">R$ 146,50 <small>por mês</small></p><p>até 6 profissionais</p></div>
+<div class="plano"><h3>Deluxe</h3><p class="preco">R$ 246,50 <small>por mês</small></p><p>até 12 profissionais</p></div>
+<div class="plano"><h3>Império</h3><p class="preco">R$ 366,50 <small>por mês</small></p><p>até 20 profissionais</p></div>
+</div>
+<p>Mais de 20 profissionais? <a href="/opa/#sob-medida">Conte sua necessidade</a>. Você paga por mês, não por mensagem: <a href="/opa/#planos">ver os planos</a>.</p>
+<p class="gratis">7 dias grátis em todos os planos. Sem fidelidade e sem multa.</p>
+</section>
+<section class="grupo" aria-labelledby="g-garantias">
+<h2 id="g-garantias">Nossas garantias</h2>
+<ul class="garantias">
+<li><strong>A agenda nunca trava.</strong> Se o pagamento atrasar, a agenda fica em modo de leitura: nada some e nenhum cliente fica sem o horário.</li>
+<li><strong>Sem fidelidade e sem multa.</strong> Para sair, basta uma mensagem.</li>
+<li><strong>Seus dados são seus.</strong> Exporte clientes e atendimentos quando quiser.</li>
+<li><strong>Sem dinheiro no meio do caminho.</strong> O cliente paga o barbeiro, e a cota vai direto para a chave Pix do dono. O Opa não recebe nem repassa pagamentos.</li>
+<li><strong>API oficial do WhatsApp.</strong> As mensagens saem pela plataforma oficial da Meta, sem programas não oficiais no celular da barbearia.</li>
+</ul>
+</section>
+
+<p class="nota">O Opa está em fase de demonstração. O lembrete ao cliente e as mensagens saindo do número da barbearia entram junto com a conexão do WhatsApp da barbearia.</p>
+<p class="cta"><a href="/opa/demo/">Ver a demonstração</a><a href="/opa/comparativo/">Comparar com outras agendas</a></p>
+
+</main><footer><p>Opa · CNPJ 66.824.150/0001-28.<br>Contato: <a href="mailto:contato@useusa.com.br">contato@useusa.com.br</a></p>
+<p><a href="/opa/recursos/">Recursos</a> · <a href="/opa/comparativo/">Comparativo</a> · <a href="/opa/demo/">Demonstração</a> · <a href="/opa/blog/">Blog</a> · <a href="mailto:contato@useusa.com.br?subject=Suporte%20Opa">Suporte</a> · <a href="/opa/seguranca/">Segurança</a> · <a href="/privacidade/">Política de privacidade</a> · <a href="/termos/">Termos de uso</a> · <a href="/exclusao-de-dados/">Exclusão de dados</a></p></footer></body></html>

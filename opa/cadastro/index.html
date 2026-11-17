@@ -1,0 +1,126 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cadastro — Opa</title><meta name="description" content="Deixe seus dados e avise-me quando o Opa estiver no ar. 7 dias grátis em todos os planos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/opa/estilo.css">
+<style>
+[hidden]{display:none!important}
+.form{display:grid;gap:1rem;margin-top:1.5rem;max-width:34rem}
+.campo{display:flex;flex-direction:column;gap:.3rem;font:600 .95rem var(--fonte)}
+.campo input,.campo select{font:400 1rem var(--fonte);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:10px;padding:.65rem .75rem}
+.campo input:focus,.campo select:focus{outline:3px solid color-mix(in srgb,var(--blue) 45%,transparent);outline-offset:1px;border-color:var(--blue)}
+.campo small{font:400 .85rem var(--fonte);color:var(--muted)}
+.duas{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+@media (max-width:30rem){.duas{grid-template-columns:1fr}}
+fieldset{border:0;padding:0;margin:0}
+legend{font:600 .95rem var(--fonte);margin-bottom:.35rem}
+.radios{display:flex;gap:1.25rem;flex-wrap:wrap}
+.radios label,.aceite{display:flex;gap:.5rem;align-items:flex-start;font-size:1rem;cursor:pointer}
+.radios input,.aceite input{width:1.15rem;height:1.15rem;margin-top:.25rem;accent-color:var(--coral);flex:none}
+.isca{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bt{justify-self:start;background:var(--red);color:#fff;border:0;border-radius:999px;padding:.85rem 1.5rem;font:600 1.05rem var(--fonte);cursor:pointer}
+.bt[disabled]{opacity:.6;cursor:wait}
+.msg{border-radius:12px;padding:.8rem 1rem;font-size:1rem}
+.msg.erro{background:color-mix(in srgb,var(--red) 10%,transparent);border:1px solid color-mix(in srgb,var(--red) 45%,transparent)}
+.ok{margin-top:2rem;padding:1.5rem;border:1px solid var(--line);border-radius:16px}
+.ok h2{margin:0 0 .4rem}
+.priv{font-size:.85rem;color:var(--muted)}
+</style></head><body>
+<header><a class="brand" href="/opa/">Opa</a><nav><a href="/opa/recursos/">Recursos</a><a href="/opa/comparativo/">Comparativo</a><a href="/opa/demo/">Demonstração</a><a href="/opa/blog/">Blog</a><a class="bt-nav" href="/opa/cadastro/">Testar grátis</a></nav></header><main>
+<h1>Quero usar o Opa</h1>
+<p class="lead">Deixe seus dados e avisamos você assim que o Opa estiver no ar. 7 dias grátis em todos os planos.</p>
+<p class="lead" id="plano-escolhido" hidden></p>
+<form class="form" id="form" novalidate>
+<label class="campo">Seu nome<input name="nome" required minlength="2" maxlength="80" autocomplete="name"></label>
+<label class="campo">Nome do estabelecimento<input name="estabelecimento" required minlength="2" maxlength="100" autocomplete="organization"></label>
+<label class="campo">Endereço<input name="endereco" required minlength="5" maxlength="200" autocomplete="street-address"><small>Rua, número e bairro</small></label>
+<label class="campo">Quantos profissionais atendem?<input name="profissionais" type="number" required min="1" max="50" inputmode="numeric"></label>
+<fieldset><legend>Tipo</legend><div class="radios">
+<label><input type="radio" name="tipo" value="barbearia" required> Barbearia</label>
+<label><input type="radio" name="tipo" value="salao"> Salão</label>
+<label><input type="radio" name="tipo" value="manicure"> Manicure</label>
+<label><input type="radio" name="tipo" value="massagem"> Massagem</label>
+<label><input type="radio" name="tipo" value="personal"> Personal trainer</label>
+<label><input type="radio" name="tipo" value="outro"> Outro</label>
+</div></fieldset>
+<label class="campo" id="campo-tipo-outro" hidden>Qual?<input name="tipo_outro" minlength="2" maxlength="60" placeholder="Ex.: estúdio de tatuagem"></label>
+<label class="campo">Atualmente usa algum sistema de agendamento?
+<select name="sistema_atual" required>
+<option value="">Escolha uma opção</option>
+<option value="nenhum">Não uso (agenda no papel ou WhatsApp)</option>
+<option value="trinks">Trinks</option>
+<option value="booksy">Booksy</option>
+<option value="gendo">Gendo</option>
+<option value="appbarber">AppBarber</option>
+<option value="avec">Avec</option>
+<option value="cashbarber">Cash Barber</option>
+<option value="bestbarbers">BestBarbers</option>
+<option value="outro">Outro</option>
+</select></label>
+<label class="campo" id="campo-sistema-outro" hidden>Qual?<input name="sistema_outro" minlength="2" maxlength="60" placeholder="Nome do sistema"></label>
+<div class="duas">
+<label class="campo">WhatsApp<input name="whatsapp" type="tel" required inputmode="tel" autocomplete="tel-national" placeholder="(13) 99999-9999" maxlength="20"></label>
+<label class="campo">E-mail<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+</div>
+<label class="isca" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+<label class="aceite"><input type="checkbox" name="aceite" required> Aceito ser avisado por e-mail e WhatsApp quando o Opa estiver no ar.</label>
+<div class="msg erro" id="erro" role="alert" hidden></div>
+<button class="bt" type="submit" id="enviar">Enviar</button>
+<p class="priv">Usamos estes dados só para avisar quando o Opa estiver no ar. Veja a <a href="/privacidade/">política de privacidade</a>.</p>
+</form>
+<div class="ok" id="ok" role="status" tabindex="-1" hidden><h2>Recebido!</h2><p>Você será avisado quando o Opa estiver no ar.</p><p><a href="/opa/demo/">Ver a demonstração</a> · <a href="/opa/recursos/">Ver os recursos</a></p></div>
+</main><footer><p>Opa · CNPJ 66.824.150/0001-28.<br>Contato: <a href="mailto:contato@useusa.com.br">contato@useusa.com.br</a></p>
+<p><a href="/opa/recursos/">Recursos</a> · <a href="/opa/comparativo/">Comparativo</a> · <a href="/opa/demo/">Demonstração</a> · <a href="/opa/blog/">Blog</a> · <a href="mailto:contato@useusa.com.br?subject=Suporte%20Opa">Suporte</a> · <a href="/opa/seguranca/">Segurança</a> · <a href="/privacidade/">Política de privacidade</a> · <a href="/termos/">Termos de uso</a> · <a href="/exclusao-de-dados/">Exclusão de dados</a></p></footer><script>
+(() => {
+  "use strict";
+  // Envia para a Edge Function usab_leads. Nada de chave na página. Em localhost, usa a função rodando na máquina.
+  const API = ["localhost", "127.0.0.1"].includes(location.hostname) ? "http://localhost:8791/" : "https://api.usenotinha.com.br/functions/v1/usab_leads";
+  const form = document.getElementById("form"), erro = document.getElementById("erro"), bt = document.getElementById("enviar"), ok = document.getElementById("ok");
+  // Tempo no formulário medido só aqui no aparelho (performance.now não depende do relógio do celular). A função
+  // confere a duração ("d"): menos de 3 s é tratado como robô.
+  const montado = performance.now();
+  // "Outro" abre o campo "Qual?", que passa a ser obrigatório.
+  const ligarQual = (campo, mostrar) => {
+    const bloco = document.getElementById(campo), input = bloco.querySelector("input");
+    bloco.hidden = !mostrar; input.required = mostrar;
+    if (!mostrar) input.value = "";
+  };
+  form.addEventListener("change", (ev) => {
+    if (ev.target.name === "tipo") ligarQual("campo-tipo-outro", ev.target.value === "outro");
+    if (ev.target.name === "sistema_atual") ligarQual("campo-sistema-outro", ev.target.value === "outro");
+  });
+  // Plano do botão que a pessoa tocou na página inicial (?plano=premium etc.).
+  const PLANOS = { solo: "Solo", time: "Time", premium: "Premium", deluxe: "Deluxe", imperio: "Império" };
+  const PLANO = Object.keys(PLANOS).includes(new URLSearchParams(location.search).get("plano")) ? new URLSearchParams(location.search).get("plano") : null;
+  if (PLANO) { const el = document.getElementById("plano-escolhido"); el.textContent = `Plano escolhido: ${PLANOS[PLANO]}. Você pode mudar depois.`; el.hidden = false; }
+  const mostrarErro = (m) => { erro.textContent = m; erro.hidden = false; erro.scrollIntoView({ block: "center" }); };
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    erro.hidden = true;
+    if (!form.checkValidity()) {
+      const primeiro = form.querySelector(":invalid");
+      const nomes = { nome: "seu nome", estabelecimento: "o nome do estabelecimento", endereco: "o endereço", profissionais: "quantos profissionais atendem (de 1 a 50)", tipo: "o tipo do estabelecimento", tipo_outro: "qual é o tipo do estabelecimento", sistema_atual: "se usa algum sistema de agendamento", sistema_outro: "qual sistema de agendamento usa", whatsapp: "o WhatsApp", email: "o e-mail", aceite: "o aceite para ser avisado" };
+      mostrarErro(`Confira ${nomes[primeiro?.name] || "os campos"}.`);
+      primeiro?.focus();
+      return;
+    }
+    const f = new FormData(form);
+    const dados = {
+      nome: f.get("nome"), estabelecimento: f.get("estabelecimento"), endereco: f.get("endereco"), profissionais: Number(f.get("profissionais")),
+      tipo: f.get("tipo"), tipo_outro: f.get("tipo") === "outro" ? f.get("tipo_outro") : null,
+      sistema_atual: f.get("sistema_atual"), sistema_outro: f.get("sistema_atual") === "outro" ? f.get("sistema_outro") : null,
+      whatsapp: f.get("whatsapp"), email: f.get("email"), aceite: f.get("aceite") === "on", site: f.get("site") || "", d: Math.round(performance.now() - montado), plano: PLANO,
+    };
+    bt.disabled = true; bt.textContent = "Enviando…";
+    try {
+      const r = await fetch(API, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(dados) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || !j.ok) throw new Error(j.mensagem || "Não consegui enviar agora. Tente de novo em alguns minutos.");
+      form.hidden = true; ok.hidden = false; ok.focus();
+    } catch (e) {
+      mostrarErro(e instanceof TypeError ? "Sem conexão. Confira a internet e tente de novo." : e.message);
+      bt.disabled = false; bt.textContent = "Enviar";
+    }
+  });
+})();
+</script></body></html>
