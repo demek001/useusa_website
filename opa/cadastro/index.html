@@ -89,9 +89,10 @@ legend{font:600 .95rem var(--fonte);margin-bottom:.35rem}
     if (ev.target.name === "tipo") ligarQual("campo-tipo-outro", ev.target.value === "outro");
     if (ev.target.name === "sistema_atual") ligarQual("campo-sistema-outro", ev.target.value === "outro");
   });
-  // Plano do botão que a pessoa tocou na página inicial (?plano=premium etc.).
-  const PLANOS = { solo: "Solo", time: "Time", premium: "Premium", deluxe: "Deluxe", imperio: "Império" };
-  const PLANO = Object.keys(PLANOS).includes(new URLSearchParams(location.search).get("plano")) ? new URLSearchParams(location.search).get("plano") : null;
+  // Plano do botão que a pessoa tocou na página inicial (?plano=solo ou time). Valor desconhecido cai em solo.
+  const PLANOS = { solo: "Solo", time: "Time" };
+  const pedido = new URLSearchParams(location.search).get("plano");
+  const PLANO = pedido === null ? null : (Object.hasOwn(PLANOS, pedido) ? pedido : "solo");
   if (PLANO) { const el = document.getElementById("plano-escolhido"); el.textContent = `Plano escolhido: ${PLANOS[PLANO]}. Você pode mudar depois.`; el.hidden = false; }
   const mostrarErro = (m) => { erro.textContent = m; erro.hidden = false; erro.scrollIntoView({ block: "center" }); };
   form.addEventListener("submit", async (ev) => {

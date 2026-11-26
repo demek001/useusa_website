@@ -1,5 +1,5 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Opa — agenda pelo WhatsApp para barbearias e salões</title><meta name="description" content="O cliente agenda por um link, recebe a confirmação e o lembrete no WhatsApp, e o profissional fica sabendo de tudo sem atender o celular. 7 dias grátis.">
+<title>Opa — agenda pelo WhatsApp para barbearias</title><meta name="description" content="Seu cliente marca sozinho pelo WhatsApp, em segundos. Você corta sem parar pra responder mensagem. Agenda pelo WhatsApp feita só para barbearias. 7 dias grátis.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/opa/estilo.css">
@@ -68,6 +68,27 @@ section{padding:3.5rem 1.25rem}
 .garantias strong{display:block;font-size:1.1rem;margin-bottom:.25rem}
 .garantias strong::before{content:"✓";color:var(--coral);margin-right:.45rem}
 .garantias span{color:var(--muted)}
+/* Dia com o Opa */
+.dia{display:grid;gap:1.2rem;margin:1.6rem 0 0;padding:0;list-style:none}
+@media (min-width:48rem){.dia{grid-template-columns:repeat(4,1fr)}}
+.dia li{max-width:none;border-left:3px solid var(--coral);padding:.2rem 0 .2rem 1rem}
+.dia b{display:block;font:800 .85rem var(--fonte);text-transform:uppercase;letter-spacing:.06em;color:var(--coral-forte)}
+.dia strong{display:block;font-size:1.08rem;margin:.2rem 0}
+.dia span{color:var(--muted)}
+/* O que não faz: faixa de destaque logo após o herói */
+.nao{background:var(--ink);color:var(--paper);border-radius:24px;margin:0 1.25rem;padding:3rem 1.6rem}
+.nao .sec-titulo{color:var(--paper);font-size:clamp(1.9rem,5vw,2.8rem);max-width:18ch}
+.nao-sobre{font:800 .8rem var(--fonte);text-transform:uppercase;letter-spacing:.08em;color:var(--coral);margin:0 0 .6rem}
+.nao-lista{display:grid;gap:1.2rem;margin:1.6rem 0;padding:0;list-style:none}
+@media (min-width:48rem){.nao-lista{grid-template-columns:repeat(3,1fr)}}
+.nao-lista li{max-width:none}
+.nao-lista strong{display:block;font-size:1.1rem;text-decoration:line-through;text-decoration-color:var(--coral);text-decoration-thickness:2px}
+.nao-lista strong::before{content:"✕ ";color:var(--coral);display:inline-block;text-decoration:none;margin-right:.3rem}
+.nao-lista span{color:color-mix(in srgb,var(--paper) 72%,transparent)}
+.filtro{margin:1.2rem 0 0;color:color-mix(in srgb,var(--paper) 72%,transparent);max-width:52ch}
+.faz{font:800 clamp(1.15rem,3vw,1.45rem)/1.35 var(--fonte);margin:1.6rem 0 0;max-width:40ch}
+.faz em{font-style:normal;color:var(--coral)}
+@media (min-width:56rem){.planos.dois{grid-template-columns:repeat(2,1fr)}.planos.dois .plano,.planos.dois .plano:nth-child(4){grid-column:auto}}
 /* Final */
 .final{background:var(--soft);border-radius:24px;margin:1rem 1.25rem 0;text-align:center;padding:3rem 1.25rem}
 .final .sec-titulo,.final p{margin-left:auto;margin-right:auto}
@@ -103,8 +124,8 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 
 <section class="heroi">
 <div>
-<h1>Cliente que marca e não aparece. Celular que não para.</h1>
-<p class="lead">O Opa cuida da agenda pelo WhatsApp: o cliente marca por um link, recebe a confirmação e o lembrete, e você fica sabendo de tudo sem largar a tesoura.</p>
+<h1>Você corta. O cliente marca sozinho.</h1>
+<p class="lead">Seu dia sem parar o corte pra responder “tem horário?”. O cliente escolhe o horário pelo WhatsApp em segundos, recebe a confirmação e o lembrete. Você só olha a agenda.</p>
 <ul class="sem" aria-label="Como é"><li>Sem app</li><li>Sem cadastro</li><li>Sem recepcionista</li></ul>
 <div class="acoes"><a class="bt" href="/opa/cadastro/">Testar 7 dias grátis</a><a class="link" href="/opa/demo/">Ver como funciona</a></div>
 <p class="nota">Tudo pelo WhatsApp que o seu cliente já usa. Sem fidelidade e sem multa.</p>
@@ -133,16 +154,29 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 </svg>
 </section>
 
-<section aria-labelledby="t-quem">
-<h2 class="sec-titulo" id="t-quem">Para quem trabalha com hora marcada</h2>
-<ul class="publico">
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="18" r="3"/><circle cx="17" cy="18" r="3"/><path d="M9 15.5 18 4M15 15.5 6 4"/></svg>Barbearia</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10a7 7 0 0 1 14 0v2H5z"/><path d="M12 12v4"/><rect x="9" y="16" width="6" height="5" rx="1"/></svg>Salão</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="10" width="8" height="11" rx="2"/><path d="M10 10V7h4v3M11 7V3h2v4"/></svg>Manicure</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18M5 15a7 4 0 0 1 14 0"/><circle cx="12" cy="7" r="2"/><path d="M3 19h18"/></svg>Massagem</li>
-<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12h10"/><rect x="3" y="8" width="4" height="8" rx="1"/><rect x="17" y="8" width="4" height="8" rx="1"/></svg>Personal trainer</li>
+<section class="nao" aria-labelledby="t-nao">
+<p class="nao-sobre">Antes de testar, a verdade</p>
+<h2 class="sec-titulo" id="t-nao">O Opa não enche sua agenda.</h2>
+<ul class="nao-lista">
+<li><strong>Não traz cliente novo</strong><span>Quem traz cliente é seu corte, seu atendimento e o boca a boca do bairro.</span></li>
+<li><strong>Não lota seus horários</strong><span>Sistema nenhum faz isso. Quem enche a cadeira é o barbeiro.</span></li>
+<li><strong>Não dobra seu faturamento</strong><span>Promessa de mágica é para quem vende curso. A gente vende agenda.</span></li>
 </ul>
+<p class="faz">O Opa faz uma coisa só, e faz bem: <em>o cliente que já quer cortar com você marca em segundos, sem esperar resposta.</em></p>
+<p class="filtro">Procurando quem lote sua agenda? O Opa não é para você. Seu cliente já quer marcar e trava no “tem horário?”. Aí é.</p>
 </section>
+
+<section aria-labelledby="t-dia">
+<h2 class="sec-titulo" id="t-dia">Um dia na barbearia com o Opa</h2>
+<p class="lead">Feito só para barbearia. Do primeiro corte ao fechamento.</p>
+<ol class="dia">
+<li><b>8h</b><strong>A agenda chega antes de você</strong><span>Todo dia de manhã, os horários do dia no seu WhatsApp.</span></li>
+<li><b>Durante o dia</b><strong>Celular no bolso</strong><span>O cliente marca, remarca e cancela sozinho. Você não para o corte.</span></li>
+<li><b>Véspera</b><strong>Lembrete sem você lembrar</strong><span>O cliente recebe o aviso e responde “Opa, confirmo”.</span></li>
+<li><b>Fechamento</b><strong>Dia fechado, cabeça leve</strong><span>Resumo do dia pronto. Nada pra anotar no caderno.</span></li>
+</ol>
+</section>
+
 
 <section aria-labelledby="t-como">
 <h2 class="sec-titulo" id="t-como">Como funciona</h2>
@@ -155,17 +189,13 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 
 <section aria-labelledby="t-preco" id="planos">
 <h2 class="sec-titulo" id="t-preco">Você paga por mês, não por mensagem.</h2>
-<p class="lead">Preço fixo, do tamanho da sua equipe. 7 dias grátis em todos os planos.</p>
-<div class="planos" role="list">
-<div class="plano" role="listitem"><h3>Solo</h3><p class="preco">R$ 56,50 <small>/mês</small></p><p class="det">1 profissional</p><a class="bt" href="/opa/cadastro/?plano=solo">Testar o Solo</a></div>
-<div class="plano" role="listitem"><h3>Time</h3><p class="preco">R$ 86,50 <small>/mês</small></p><p class="det">2 a 4 profissionais</p><a class="bt" href="/opa/cadastro/?plano=time">Testar o Time</a></div>
-<div class="plano destaque" role="listitem"><span class="selo">Recomendado</span><h3>Premium</h3><p class="preco">R$ 146,50 <small>/mês</small></p><p class="det">até 6 profissionais</p><a class="bt" href="/opa/cadastro/?plano=premium">Testar o Premium</a></div>
-<div class="plano" role="listitem"><h3>Deluxe</h3><p class="preco">R$ 246,50 <small>/mês</small></p><p class="det">até 12 profissionais</p><p class="ref">Porte de referência: cerca de 2.200 agendamentos por mês</p><a class="bt" href="/opa/cadastro/?plano=deluxe">Testar o Deluxe</a></div>
-<div class="plano" role="listitem"><h3>Império</h3><p class="preco">R$ 366,50 <small>/mês</small></p><p class="det">até 20 profissionais</p><p class="ref">Porte de referência: cerca de 3.600 agendamentos por mês</p><a class="bt" href="/opa/cadastro/?plano=imperio">Testar o Império</a></div>
+<p class="lead">Preço fixo. 7 dias grátis nos dois planos.</p>
+<div class="planos dois" role="list">
+<div class="plano" role="listitem"><h3>Solo</h3><p class="preco">R$ 56,50 <small>/mês</small></p><p class="det">Você sozinho, 1 cadeira</p><a class="bt" href="/opa/cadastro/?plano=solo">Testar o Solo</a></div>
+<div class="plano destaque" role="listitem"><span class="selo">Mais escolhido</span><h3>Time</h3><p class="preco">R$ 86,50 <small>/mês</small></p><p class="det">Até 3 cadeiras</p><a class="bt" href="/opa/cadastro/?plano=time">Testar o Time</a></div>
 </div>
-<p class="dica-rolar">Deslize para o lado para ver todos os planos.</p>
-<div class="sob"><p>Mais de 20 profissionais? Conte sua necessidade.<span>Montamos um plano sob medida para redes e espaços grandes.</span></p><button class="bt contorno" type="button" id="abrir-sob">Falar sobre um plano sob medida</button></div>
-<p class="planos-nota">Os agendamentos servem só de referência de porte: não há limite de agendamentos nem cobrança por mensagem.</p>
+<div class="sob"><p>Mais de 3 cadeiras? Fale com a gente.<span>Montamos o plano do tamanho da sua barbearia.</span></p><button class="bt contorno" type="button" id="abrir-sob">Falar com a gente</button></div>
+<p class="planos-nota">Sem limite de agendamentos e sem cobrança por mensagem.</p>
 </section>
 
 <section aria-labelledby="t-garantias">
@@ -179,7 +209,7 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 </section>
 
 <section class="final" aria-labelledby="t-final">
-<h2 class="sec-titulo" id="t-final">Experimente na sua barbearia</h2>
+<h2 class="sec-titulo" id="t-final">Teste uma semana. Sinta a diferença no celular.</h2>
 <p class="lead">7 dias grátis, sem fidelidade e sem multa.</p>
 <div class="acoes"><a class="bt" href="/opa/cadastro/">Testar 7 dias grátis</a><a class="link" href="/opa/demo/">Ver como funciona</a></div>
 <div class="mais"><a class="link" href="/opa/recursos/">Todos os recursos</a><a class="link" href="/opa/comparativo/">Comparativo com outras agendas</a></div>
@@ -187,24 +217,24 @@ dialog::backdrop{background:rgba(10,14,20,.55)}
 
 </main>
 <footer><div class="rodape">
-<div><a class="brand" href="/opa/">Opa</a><p>Agenda pelo WhatsApp para quem trabalha com hora marcada.</p><p>Opa · CNPJ 66.824.150/0001-28</p></div>
+<div><a class="brand" href="/opa/">Opa</a><p>Agenda pelo WhatsApp para barbearias.</p><p>Opa · CNPJ 66.824.150/0001-28</p></div>
 <div><h3>Ajuda</h3><ul><li><a href="mailto:contato@useusa.com.br?subject=Suporte%20Opa">Suporte</a></li><li><a href="/opa/seguranca/">Segurança</a></li><li><a href="/opa/demo/">Demonstração</a></li><li><a href="/opa/blog/">Blog</a></li></ul></div>
 <div><h3>Legal</h3><ul><li><a href="/termos/">Termos de uso</a></li><li><a href="/privacidade/">Privacidade</a></li><li><a href="/exclusao-de-dados/">Exclusão de dados</a></li></ul></div>
 </div></footer>
 
 <dialog id="dlg-sob" aria-labelledby="sob-titulo"><div class="dlg">
 <button class="fechar" type="button" id="fechar-sob" aria-label="Fechar">×</button>
-<h2 id="sob-titulo">Plano sob medida</h2>
-<p class="lead" style="font-size:1rem;margin:0">Conte sobre o seu espaço. Respondemos por e-mail ou WhatsApp.</p>
+<h2 id="sob-titulo">Mais de 3 cadeiras</h2>
+<p class="lead" style="font-size:1rem;margin:0">Conte sobre sua barbearia. Respondemos por e-mail ou WhatsApp.</p>
 <form class="form" id="form-sob" novalidate>
 <label class="campo">Seu nome<input name="nome" required minlength="2" maxlength="80" autocomplete="name"></label>
-<label class="campo">Nome do estabelecimento<input name="estabelecimento" required minlength="2" maxlength="100" autocomplete="organization"></label>
-<label class="campo">Quantos profissionais?<input name="profissionais" type="number" required min="1" max="1000" inputmode="numeric" value="21"></label>
+<label class="campo">Nome da barbearia<input name="estabelecimento" required minlength="2" maxlength="100" autocomplete="organization"></label>
+<label class="campo">Quantas cadeiras?<input name="profissionais" type="number" required min="1" max="1000" inputmode="numeric" value="4"></label>
 <div class="duas">
 <label class="campo">WhatsApp<input name="whatsapp" type="tel" required inputmode="tel" autocomplete="tel-national" placeholder="(13) 99999-9999" maxlength="20"></label>
 <label class="campo">E-mail<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
 </div>
-<label class="campo">Mensagem<textarea name="mensagem" required maxlength="1000" placeholder="Quantas unidades, o que precisa, como atende hoje…"></textarea></label>
+<label class="campo">Mensagem<textarea name="mensagem" required maxlength="1000" placeholder="Quantas unidades, como agenda hoje…"></textarea></label>
 <label class="isca" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
 <label class="aceite"><input type="checkbox" name="aceite" required> Aceito ser contatado por e-mail e WhatsApp sobre o Opa.</label>
 <div class="msg" id="erro-sob" role="alert" hidden></div>
